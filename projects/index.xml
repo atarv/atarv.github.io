@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Aleksi Tarvainen</title>
-    <link>http://www.atarv.xyz/projects/</link>
+    <link>https://www.atarv.xyz/projects/</link>
     <description>Recent content in Projects on Aleksi Tarvainen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 27 Dec 2019 00:00:00 +0200</lastBuildDate>
     
-	<atom:link href="http://www.atarv.xyz/projects/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.atarv.xyz/projects/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Vaalikartta</title>
-      <link>http://www.atarv.xyz/projects/vaalikartta/</link>
+      <link>https://www.atarv.xyz/projects/vaalikartta/</link>
       <pubDate>Fri, 27 Dec 2019 00:00:00 +0200</pubDate>
       
-      <guid>http://www.atarv.xyz/projects/vaalikartta/</guid>
+      <guid>https://www.atarv.xyz/projects/vaalikartta/</guid>
       <description>Vaalikartta is a web app to explore data about Finnish parliamentary elections from 1983 to 2019. It also includes some information about each municipality and cabinets.
 It is a product of the course Open Data Student Projects (TIEA207). We developed the app in a group of four students. I took care of extracting most of the data and developing the backend API. We didn&#39;t have any designated project manager, but our project board was managed mostly by me.</description>
     </item>
     
     <item>
       <title>Homepage</title>
-      <link>http://www.atarv.xyz/projects/homepage/</link>
+      <link>https://www.atarv.xyz/projects/homepage/</link>
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0300</pubDate>
       
-      <guid>http://www.atarv.xyz/projects/homepage/</guid>
+      <guid>https://www.atarv.xyz/projects/homepage/</guid>
       <description>I started working on this site on 2019-09-04. The site is built with Hugo using its various functions (eg. templates). The theme is my homebrew. I call it Minimus for being minimal (though barebones would describe it equally well).
 The contents of this site will probably reflect my own interests. You can read more about those on the about page.
 The site is hosted on Github Pages. I hope you enjoy your stay!</description>
@@ -34,10 +34,10 @@ The site is hosted on Github Pages. I hope you enjoy your stay!</description>
     
     <item>
       <title>RPG-Dice</title>
-      <link>http://www.atarv.xyz/projects/rpg-dice/</link>
+      <link>https://www.atarv.xyz/projects/rpg-dice/</link>
       <pubDate>Fri, 05 Jul 2019 00:00:00 +0300</pubDate>
       
-      <guid>http://www.atarv.xyz/projects/rpg-dice/</guid>
+      <guid>https://www.atarv.xyz/projects/rpg-dice/</guid>
       <description>I built this little app, when I was working on Helsinki university&#39;s Fullstack MOOC 2019. I wanted to try out how Typescript pairs with React. Maybe Typescripts best parts wont&#39;t show, when making such small apps, but I saw it&#39;s potential. Defining types gives me a sense of safety and I much prefer compilation errors to runtime errors, which really don&#39;t hint at eg. what could cause something to be &amp;lsquo;undefined&amp;rsquo;.</description>
     </item>
     
