@@ -1,0 +1,219 @@
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css?family=Oxygen+Mono&display=swap');
+
+html {
+    font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+    html {
+        font-family: 'Inter var', sans-serif;
+    }
+}
+
+:root {
+    --nord1: #2e3440;
+    --nord2: #3b4252;
+    --nord3: #434c5e;
+    --nord4: #4c566a;
+    --nord5: #d8dee9;
+    --nord6: #e5e9f0;
+    --nord7: #eceff4;
+    --nord8: #8fbcbb;
+    --nord9: #88c0d0;
+    --nord10: #81a1c1;
+    --nord11: #5e81ac;
+    --nord12: #bf616a;
+    --nord13: #d08770;
+    --nord14: #ebcb8b;
+    --nord15: #a3be8c;
+    --nord16: #b48ead;
+    --page-max-width: 800px;
+}
+
+body {
+    color: var(--nord1);
+    font-size: 1.2em;
+    margin: 0 auto;
+    max-width: var(--page-max-width);
+    padding: 1em;
+    line-height: 1.5em;
+}
+
+#home {
+    max-width: 30rem;
+    margin: 2em auto;
+    text-align: center;
+}
+
+#places a {
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-basis: 100px;
+    margin: 0.5em auto;
+}
+
+.sidebar-nav {
+    display: flex;
+    justify-content: center;
+    max-width: 25rem;
+    margin: 0 auto;
+}
+
+.sidebar-nav-link {
+    flex: 1 1;
+}
+
+.no-shadow,
+.no-shadow:hover,
+.no-shadow:focus {
+    box-shadow: none;
+}
+
+.headline {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.date {
+    text-align: right;
+    margin: auto 0;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.project-list-entry {
+    flex: 1 1;
+    margin: 0.5em 0;
+    padding: 1em;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.project-list-entry p {
+    font-size: 0.7em;
+    margin: 0;
+}
+
+.posts-list {
+    padding: 1em;
+}
+
+.posts-list-entry-header-row {
+    display: flex;
+    width: 90%;
+}
+
+.posts-list-entry-header > h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.posts-list-entry-date {
+    flex: 1 1;
+    text-align: right;
+    margin: auto 0;
+}
+
+.post-summary {
+    padding-left: 1.5em;
+    margin-bottom: 2em;
+    flex: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: inherit;
+    font-family: 'Oxygen Mono', monospace;
+}
+
+h1 {
+    font-size: 2.3em;
+    margin-bottom: 0.2em;
+}
+
+h2 {
+    font-size: 1.7em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    box-shadow: inset 0 -2px 0 white, inset 0 -5px 0 var(--nord10);
+    padding-bottom: 0.2em;
+    transition: all 0.2s ease-out 0.05s;
+}
+
+a:hover,
+a:focus {
+    box-shadow: inset 0 -2px 0 white, inset 0 -5px 0 var(--nord15);
+}
+
+img {
+    max-width: 100%;
+}
+
+footer {
+    color: var(--nord4);
+    max-width: var(--page-max-width);
+    width: 100%;
+    font-size: 0.7em;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    body {
+        max-width: auto;
+        padding: 0.5rem;
+        font-size: 1.1em;
+    }
+
+    #home {
+        margin: 0 auto;
+    }
+
+    .headline {
+        flex-direction: column;
+    }
+
+    .date {
+        text-align: left;
+        margin: 0;
+        padding: 0;
+    }
+
+    .project-list {
+        flex-direction: column;
+    }
+
+    .posts-list {
+        padding: 0;
+    }
+
+    .posts-list-entry-header-row {
+        flex-direction: column;
+    }
+
+    .posts-list-entry-date {
+        text-align: left;
+    }
+
+    .post-summary {
+        margin-top: 0.2em;
+        padding-left: 0.5em;
+    }
+}
