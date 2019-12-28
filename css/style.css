@@ -8,6 +8,7 @@ html {
 @supports (font-variation-settings: normal) {
     html {
         font-family: 'Inter var', sans-serif;
+        font-feature-settings: 'liga' 1, 'calt' 1;
     }
 }
 
@@ -33,7 +34,7 @@ html {
 
 body {
     color: var(--nord1);
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin: 0 auto;
     max-width: var(--page-max-width);
     padding: 1em;
@@ -73,12 +74,10 @@ body {
 }
 
 .headline {
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    margin-top: 0.4em;
 }
 
 .date {
@@ -131,6 +130,19 @@ body {
     flex: none;
 }
 
+.some-icons-container a {
+    margin: 0 0.2em;
+}
+
+code {
+    background: var(--nord7);
+    padding: 0 0.2em;
+}
+
+.chroma > code {
+    background: inherit;
+}
+
 h1,
 h2,
 h3,
@@ -139,6 +151,7 @@ h5,
 h6 {
     color: inherit;
     font-family: 'Oxygen Mono', monospace;
+    line-height: 1.05em;
 }
 
 h1 {
@@ -148,6 +161,7 @@ h1 {
 
 h2 {
     font-size: 1.7em;
+    margin: 0.3em 0;
 }
 
 a {
@@ -179,7 +193,6 @@ footer {
     body {
         max-width: auto;
         padding: 0.5rem;
-        font-size: 1.1em;
     }
 
     #home {
