@@ -8,6 +8,7 @@ html {
 @supports (font-variation-settings: normal) {
     html {
         font-family: 'Inter var', sans-serif;
+        font-feature-settings: 'liga' 1, 'calt' 1;
     }
 }
 
@@ -33,7 +34,7 @@ html {
 
 body {
     color: var(--nord1);
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin: 0 auto;
     max-width: var(--page-max-width);
     padding: 1em;
@@ -73,7 +74,6 @@ body {
 }
 
 .headline {
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -128,6 +128,19 @@ body {
     padding-left: 1.5em;
     margin-bottom: 2em;
     flex: none;
+}
+
+.some-icons-container a {
+    margin: 0 0.2em;
+}
+
+code {
+    background: var(--nord7);
+    padding: 0 0.2em;
+}
+
+.chroma > code {
+    background: inherit;
 }
 
 h1,
