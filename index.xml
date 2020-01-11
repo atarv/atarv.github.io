@@ -6,10 +6,20 @@
     <description>Recent content in Home on Aleksi Tarvainen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Dec 2019 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jan 2020 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://www.atarv.dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A December of Algorithms 2019</title>
+      <link>https://www.atarv.dev/posts/a-december-of-algorithms-2019/</link>
+      <pubDate>Sat, 11 Jan 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://www.atarv.dev/posts/a-december-of-algorithms-2019/</guid>
+      <description>What? A December of Algorithms 2019 was an open coding challenge organized by SVCE-ACM student chapter. For each day of the month they presented a small algorithmic programming problem. Solutions to all of the problems had to be submitted by 2020-01-10.
+Why? The holidays were approaching and I thought I&#39;d need something to keep my little grey programming brain cells active. I was aware of Advent of Code, but I decided to do this challenge instead, because I considered it to be more approachable and doable, for sure.</description>
+    </item>
     
     <item>
       <title>Vaalikartta</title>
