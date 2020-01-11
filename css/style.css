@@ -8,6 +8,7 @@ html {
 @supports (font-variation-settings: normal) {
     html {
         font-family: 'Inter var', sans-serif;
+        font-feature-settings: 'liga' 1, 'calt' 1;
     }
 }
 
@@ -33,7 +34,7 @@ html {
 
 body {
     color: var(--nord1);
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin: 0 auto;
     max-width: var(--page-max-width);
     padding: 1em;
@@ -59,7 +60,7 @@ body {
     display: flex;
     justify-content: center;
     max-width: 25rem;
-    margin: 0 auto;
+    margin: 0 auto 1em auto;
 }
 
 .sidebar-nav-link {
@@ -73,12 +74,10 @@ body {
 }
 
 .headline {
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    margin-top: 0.4em;
 }
 
 .date {
@@ -106,7 +105,11 @@ body {
 }
 
 .posts-list {
-    padding: 1em;
+    padding: 1em 0 0 1em;
+}
+
+.posts-list-entry {
+    margin: 0em 0.2em 1.5em 0.2em;
 }
 
 .posts-list-entry-header-row {
@@ -131,6 +134,19 @@ body {
     flex: none;
 }
 
+.some-icons-container a {
+    margin: 0 0.2em;
+}
+
+code {
+    background: var(--nord7);
+    padding: 0 0.2em;
+}
+
+.chroma > code {
+    background: inherit;
+}
+
 h1,
 h2,
 h3,
@@ -139,15 +155,17 @@ h5,
 h6 {
     color: inherit;
     font-family: 'Oxygen Mono', monospace;
+    line-height: 1.05em;
 }
 
 h1 {
     font-size: 2.3em;
-    margin-bottom: 0.2em;
+    margin: 0.2em 0;
 }
 
 h2 {
     font-size: 1.7em;
+    margin: 0.3em 0;
 }
 
 a {
@@ -175,11 +193,21 @@ footer {
     position: relative;
 }
 
+blockquote {
+    font-style: italic;
+    margin: 1em 0.5em 0.5em 0.5em;
+}
+
+blockquote p {
+    border-left: 5px solid var(--nord10);
+    padding-left: 1em;
+}
+
 @media (max-width: 600px) {
     body {
         max-width: auto;
         padding: 0.5rem;
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
     #home {
@@ -200,16 +228,13 @@ footer {
         flex-direction: column;
     }
 
-    .posts-list {
-        padding: 0;
-    }
-
     .posts-list-entry-header-row {
         flex-direction: column;
     }
 
     .posts-list-entry-date {
         text-align: left;
+        margin: 0.2em 0;
     }
 
     .post-summary {
