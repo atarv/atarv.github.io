@@ -18,7 +18,7 @@
       
       <guid>https://www.atarv.dev/posts/a-december-of-algorithms-2019/</guid>
       <description>What? A December of Algorithms 2019 was an open coding challenge organized by SVCE-ACM student chapter. For each day of the month they presented a small algorithmic programming problem. Solutions to all of the problems had to be submitted by 2020-01-10.
-Why? The holidays were approaching and I thought I&#39;d need something to keep my little grey programming brain cells active. I was aware of Advent of Code, but I decided to do this challenge instead, because I considered it to be more approachable and doable, for sure.</description>
+Why? The holidays were approaching and I thought I&amp;rsquo;d need something to keep my little grey programming brain cells active. I was aware of Advent of Code, but I decided to do this challenge instead, because I considered it to be more approachable and doable, for sure.</description>
     </item>
     
     <item>
@@ -28,7 +28,7 @@ Why? The holidays were approaching and I thought I&#39;d need something to keep 
       
       <guid>https://www.atarv.dev/projects/vaalikartta/</guid>
       <description>Vaalikartta is a web app to explore data about Finnish parliamentary elections from 1983 to 2019. It also includes some information about each municipality and cabinets.
-It is a product of the course Open Data Student Projects (TIEA207). We developed the app in a group of four students. I took care of extracting most of the data and developing the backend API. We didn&#39;t have any designated project manager, but our project board was managed mostly by me.</description>
+It is a product of the course Open Data Student Projects (TIEA207). We developed the app in a group of four students. I took care of extracting most of the data and developing the backend API. We didn&amp;rsquo;t have any designated project manager, but our project board was managed mostly by me.</description>
     </item>
     
     <item>
@@ -38,7 +38,7 @@ It is a product of the course Open Data Student Projects (TIEA207). We developed
       
       <guid>https://www.atarv.dev/projects/homepage/</guid>
       <description>I started working on this site on 2019-09-04. The site is built with Hugo using its various functionalities (eg. templates). The theme is my homebrew. I call it minimus for being minimal (although barebones would describe it equally well).
-As a side note, Hugo is based on the Go programming language, which I haven&#39;t particularly used at all, but it seemed the best alternative of the static site generators I know of (Jekyll, Hakyll, Gatsby.</description>
+As a side note, Hugo is based on the Go programming language, which I haven&amp;rsquo;t particularly used at all, but it seemed the best alternative of the static site generators I know of (Jekyll, Hakyll, Gatsby.</description>
     </item>
     
     <item>
@@ -47,7 +47,7 @@ As a side note, Hugo is based on the Go programming language, which I haven&#39;
       <pubDate>Fri, 05 Jul 2019 00:00:00 +0300</pubDate>
       
       <guid>https://www.atarv.dev/projects/rpg-dice/</guid>
-      <description>I built this little app, when I was working on Helsinki university&#39;s Fullstack MOOC 2019. I wanted to try out how Typescript pairs with React. Maybe Typescripts best parts wont&#39;t show, when making such small apps, but I saw it&#39;s potential. Defining types gives me a sense of safety and I much prefer compilation errors to runtime errors, which really don&#39;t hint at eg. what could cause something to be undefined.</description>
+      <description>I built this little app, when I was working on Helsinki university&amp;rsquo;s Fullstack MOOC 2019. I wanted to try out how Typescript pairs with React. Maybe Typescripts best parts wont&amp;rsquo;t show, when making such small apps, but I saw it&amp;rsquo;s potential. Defining types gives me a sense of safety and I much prefer compilation errors to runtime errors, which really don&amp;rsquo;t hint at eg. what could cause something to be undefined.</description>
     </item>
     
     <item>
@@ -56,7 +56,8 @@ As a side note, Hugo is based on the Go programming language, which I haven&#39;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.atarv.dev/about/</guid>
-      <description>About me I&#39;m a third-year student at University of Jyväskylä majoring in information technology with minor in mathematics. I&#39;m interested in programming, audio and music; ideally combining all three. I&#39;ve discovered Linux to be a cool thing and I like to learn about it&#39;s inner workings. As low-level languages like C and C++ are used a lot in audio programming, it&#39;s probably no surprise that systems level programming intrigues me as well.</description>
+      <description>About me I&amp;rsquo;m a third-year student at University of Jyväskylä majoring in information technology with minor in mathematics. I&amp;rsquo;m interested in programming, audio and music; ideally combining all three. I&amp;rsquo;ve discovered Linux to be a cool thing and I like to learn about it&amp;rsquo;s inner workings. I strive for making robust and maintainable software.
+Regarding my musical endeavors: I&amp;rsquo;m part of the band This Horse. I dabble with making music solo (too), but I haven&amp;rsquo;t dared to put out anything yet.</description>
     </item>
     
   </channel>

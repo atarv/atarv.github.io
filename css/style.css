@@ -83,6 +83,7 @@ body {
 .date {
     text-align: right;
     margin: auto 0;
+    min-width: max-content;
 }
 
 .project-list {
@@ -120,6 +121,7 @@ body {
 .posts-list-entry-header > h4 {
     margin: 0;
     padding: 0;
+    line-height: 1.5em;
 }
 
 .posts-list-entry-date {
@@ -136,6 +138,12 @@ body {
 
 .some-icons-container a {
     margin: 0 0.2em;
+}
+
+pre {
+    padding: 0.5em;
+    border: solid 1px var(--nord4);
+    border-radius: 17px;
 }
 
 code {
@@ -155,7 +163,7 @@ h5,
 h6 {
     color: inherit;
     font-family: 'Oxygen Mono', monospace;
-    line-height: 1.05em;
+    line-height: 1.15em;
 }
 
 h1 {

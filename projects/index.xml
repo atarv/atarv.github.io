@@ -18,7 +18,7 @@
       
       <guid>https://www.atarv.dev/projects/vaalikartta/</guid>
       <description>Vaalikartta is a web app to explore data about Finnish parliamentary elections from 1983 to 2019. It also includes some information about each municipality and cabinets.
-It is a product of the course Open Data Student Projects (TIEA207). We developed the app in a group of four students. I took care of extracting most of the data and developing the backend API. We didn&#39;t have any designated project manager, but our project board was managed mostly by me.</description>
+It is a product of the course Open Data Student Projects (TIEA207). We developed the app in a group of four students. I took care of extracting most of the data and developing the backend API. We didn&amp;rsquo;t have any designated project manager, but our project board was managed mostly by me.</description>
     </item>
     
     <item>
@@ -28,7 +28,7 @@ It is a product of the course Open Data Student Projects (TIEA207). We developed
       
       <guid>https://www.atarv.dev/projects/homepage/</guid>
       <description>I started working on this site on 2019-09-04. The site is built with Hugo using its various functionalities (eg. templates). The theme is my homebrew. I call it minimus for being minimal (although barebones would describe it equally well).
-As a side note, Hugo is based on the Go programming language, which I haven&#39;t particularly used at all, but it seemed the best alternative of the static site generators I know of (Jekyll, Hakyll, Gatsby.</description>
+As a side note, Hugo is based on the Go programming language, which I haven&amp;rsquo;t particularly used at all, but it seemed the best alternative of the static site generators I know of (Jekyll, Hakyll, Gatsby.</description>
     </item>
     
     <item>
@@ -37,7 +37,7 @@ As a side note, Hugo is based on the Go programming language, which I haven&#39;
       <pubDate>Fri, 05 Jul 2019 00:00:00 +0300</pubDate>
       
       <guid>https://www.atarv.dev/projects/rpg-dice/</guid>
-      <description>I built this little app, when I was working on Helsinki university&#39;s Fullstack MOOC 2019. I wanted to try out how Typescript pairs with React. Maybe Typescripts best parts wont&#39;t show, when making such small apps, but I saw it&#39;s potential. Defining types gives me a sense of safety and I much prefer compilation errors to runtime errors, which really don&#39;t hint at eg. what could cause something to be undefined.</description>
+      <description>I built this little app, when I was working on Helsinki university&amp;rsquo;s Fullstack MOOC 2019. I wanted to try out how Typescript pairs with React. Maybe Typescripts best parts wont&amp;rsquo;t show, when making such small apps, but I saw it&amp;rsquo;s potential. Defining types gives me a sense of safety and I much prefer compilation errors to runtime errors, which really don&amp;rsquo;t hint at eg. what could cause something to be undefined.</description>
     </item>
     
   </channel>
