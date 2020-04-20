@@ -211,6 +211,11 @@ blockquote p {
     padding-left: 1em;
 }
 
+/* Prevent image links in figure from getting the underlining */
+figure a, figure a:hover, figure a:focus {
+    box-shadow: none;
+}
+
 @media (max-width: 600px) {
     body {
         max-width: auto;

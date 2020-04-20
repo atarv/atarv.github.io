@@ -3,23 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.atarv.dev/posts/a-december-of-algorithms-2019/</loc>
-    <lastmod>2020-01-11T00:00:00+02:00</lastmod>
+    <loc>https://www.atarv.dev/projects/chargen/</loc>
+    <lastmod>2020-04-20T11:16:50+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.atarv.dev/</loc>
+    <lastmod>2020-04-20T11:16:50+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.atarv.dev/projects/</loc>
+    <lastmod>2020-04-20T11:16:50+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.atarv.dev/posts/a-december-of-algorithms-2019/</loc>
     <lastmod>2020-01-11T00:00:00+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.atarv.dev/posts/</loc>
     <lastmod>2020-01-11T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.atarv.dev/projects/</loc>
-    <lastmod>2019-12-27T00:00:00+02:00</lastmod>
   </url>
   
   <url>
