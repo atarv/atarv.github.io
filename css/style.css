@@ -1,14 +1,14 @@
-@import url('https://rsms.me/inter/inter.css');
-@import url('https://fonts.googleapis.com/css?family=Oxygen+Mono&display=swap');
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://fonts.googleapis.com/css?family=Oxygen+Mono&display=swap");
 
 html {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 @supports (font-variation-settings: normal) {
     html {
-        font-family: 'Inter var', sans-serif;
-        font-feature-settings: 'liga' 1, 'calt' 1;
+        font-family: "Inter var", sans-serif;
+        font-feature-settings: "liga" 1, "calt" 1;
     }
 }
 
@@ -54,6 +54,16 @@ body {
     flex-wrap: nowrap;
     flex-basis: 100px;
     margin: 0.5em auto;
+}
+
+#subtitle {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+#subtitle.fade {
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 
 .sidebar-nav {
@@ -162,7 +172,7 @@ h4,
 h5,
 h6 {
     color: inherit;
-    font-family: 'Oxygen Mono', monospace;
+    font-family: "Oxygen Mono", monospace;
     line-height: 1.15em;
 }
 
