@@ -43,19 +43,19 @@
 random character generator, not because there isn&rsquo;t
 <a href="https://osricrpg.com/tools/index.php">one</a> or
 <a href="https://osricrpg.com/wizardawn/tool_oadvg.php">another</a> already, but because
-none of them isn&rsquo;t my own 😁. It is a bit limited right now, because it only
+none of them is my own 😁. It is a bit limited right now, because it only
 generates characters&rsquo; attributes, alignments, class-race combinations and
 randomized levels. Maybe I will extend it by making generation of names,
 items, small descriptions and such possible in the future.</p>
-<p>I wrote the backend in Haskell and frontend in Elm, which both are functional
-programming languages. The backend relies heavily on SQLite as I decided to
+<p>I wrote the back-end in Haskell and front-end in Elm, which both are functional
+programming languages. The back-end relies heavily on SQLite as I decided to
 codify game rules as such so that they could also be used easily from other
-programming languages too (maybe I&rsquo;ll build more OSRIC related software).
+programming languages (maybe I&rsquo;ll build more OSRIC related software).
 That didn&rsquo;t turn out to be a bit problematical as SQL (or at least especially
 SQLite) has a bit peculiar behavior with generating random numbers in
 queries. So I had to write, for example, class and race restrictions in
 Haskell, which wasn&rsquo;t too bad, because I got to &ldquo;reuse&rdquo; the code in the
-frontend.</p>
+front-end.</p>
 <p>This project also made me venture into serverless computing (as it&rsquo;s hosted
 on Google Cloud Run) and Docker. I had some problems with getting the Docker
 builds to behave nicely. First I had the SQLite database as a data file,

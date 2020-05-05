@@ -17,8 +17,8 @@
       <pubDate>Mon, 20 Apr 2020 11:16:50 +0300</pubDate>
       
       <guid>https://www.atarv.dev/projects/chargen/</guid>
-      <description>I built this OSRIC™ compatible random character generator, not because there isn&amp;rsquo;t one or another already, but because none of them isn&amp;rsquo;t my own 😁. It is a bit limited right now, because it only generates characters&amp;rsquo; attributes, alignments, class-race combinations and randomized levels. Maybe I will extend it by making generation of names, items, small descriptions and such possible in the future.
-I wrote the backend in Haskell and frontend in Elm, which both are functional programming languages.</description>
+      <description>I built this OSRIC™ compatible random character generator, not because there isn&amp;rsquo;t one or another already, but because none of them is my own 😁. It is a bit limited right now, because it only generates characters&amp;rsquo; attributes, alignments, class-race combinations and randomized levels. Maybe I will extend it by making generation of names, items, small descriptions and such possible in the future.
+I wrote the back-end in Haskell and front-end in Elm, which both are functional programming languages.</description>
     </item>
     
     <item>
@@ -28,7 +28,7 @@ I wrote the backend in Haskell and frontend in Elm, which both are functional pr
       
       <guid>https://www.atarv.dev/projects/vaalikartta/</guid>
       <description>Vaalikartta is a web app to explore data about Finnish parliamentary elections from 1983 to 2019. It also includes some information about each municipality and cabinets.
-It is a product of the course Open Data Student Projects (TIEA207). We developed the app in a group of four students. I took care of extracting most of the data and developing the backend API. We didn&amp;rsquo;t have any designated project manager, but our project board was managed mostly by me.</description>
+It is a product of the course Open Data Student Projects (TIEA207). We developed the app in a group of four students. I took care of extracting most of the data and developing the back-end API. We didn&amp;rsquo;t have any designated project manager, but our project board was managed mostly by me.</description>
     </item>
     
     <item>
@@ -37,7 +37,7 @@ It is a product of the course Open Data Student Projects (TIEA207). We developed
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0300</pubDate>
       
       <guid>https://www.atarv.dev/projects/homepage/</guid>
-      <description>I started working on this site on 2019-09-04. The site is built with Hugo using its various functionalities (eg. templates). The theme is my homebrew. I call it minimus for being minimal (although barebones would describe it equally well).
+      <description>I started working on this site on 2019-09-04. The site is built with Hugo using its various functionalities (e.g. templates). The theme is my home brew. I call it minimus for being minimal (although bare-bones would describe it equally well).
 As a side note, Hugo is based on the Go programming language, which I haven&amp;rsquo;t particularly used at all, but it seemed the best alternative of the static site generators I know of (Jekyll, Hakyll, Gatsby.</description>
     </item>
     
