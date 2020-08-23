@@ -6,10 +6,20 @@
     <description>Recent content in Projects on Aleksi Tarvainen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Apr 2020 11:16:50 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2020 11:12:56 +0300</lastBuildDate>
     
 	<atom:link href="https://www.atarv.dev/projects/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>M.net listings aggregator</title>
+      <link>https://www.atarv.dev/projects/mnet-aggregator/</link>
+      <pubDate>Sun, 23 Aug 2020 11:12:56 +0300</pubDate>
+      
+      <guid>https://www.atarv.dev/projects/mnet-aggregator/</guid>
+      <description>Goal At some point this summer I noticed that I spend too much time browsing through listings on Muusikoiden.net&amp;rsquo;s tori (a Finnish marketplace for used music gear). Of course, as a programmer the first thing that comes to mind is automate things, so I did. The goal was to develop a program that scrapes new listings from the site and sends a daily summary of them via email.
+Development process I started by looking at what web scraping libraries were available for Haskell.</description>
+    </item>
     
     <item>
       <title>Chargen</title>

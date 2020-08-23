@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.atarv.dev/projects/chargen/</loc>
-    <lastmod>2020-04-20T11:16:50+03:00</lastmod>
+    <loc>https://www.atarv.dev/</loc>
+    <lastmod>2020-08-23T11:12:56+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.atarv.dev/</loc>
-    <lastmod>2020-04-20T11:16:50+03:00</lastmod>
+    <loc>https://www.atarv.dev/projects/mnet-aggregator/</loc>
+    <lastmod>2020-08-23T11:12:56+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.atarv.dev/projects/</loc>
+    <lastmod>2020-08-23T11:12:56+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.atarv.dev/projects/chargen/</loc>
     <lastmod>2020-04-20T11:16:50+03:00</lastmod>
   </url>
   
