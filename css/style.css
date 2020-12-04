@@ -68,13 +68,14 @@ body {
 
 .sidebar-nav {
     display: flex;
-    justify-content: center;
-    max-width: 25rem;
-    margin: 0 auto 1em auto;
+    justify-content: flex-end;
+    margin-bottom: 1em;
 }
 
 .sidebar-nav-link {
+    max-width: 6rem;
     flex: 1 1;
+    text-align: right;
 }
 
 .no-shadow,
@@ -98,21 +99,45 @@ body {
 
 .project-list {
     display: flex;
-    flex-direction: row;
-    justify-content: start;
+    flex-direction: column;
 }
 
+.project-list-entry:first-of-type {
+    margin-top: 0.5em;
+}
 .project-list-entry {
     flex: 1 1;
-    margin: 0.5em 0;
-    padding: 1em;
     text-align: center;
     font-size: 1.1em;
 }
 
-.project-list-entry p {
-    font-size: 0.7em;
-    margin: 0;
+.project-list-entry-title-container {
+    position: relative;
+    color: var(--nord7);
+    background-color: var(--nord10);
+    border-radius: 0 15px 0 0;
+    width: fit-content;
+    float: left;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    font-family: "Oxygen Mono", monospace;
+    transform: translate(2px, -115%);
+}
+
+.project-thumbnail {
+    width: 100%;
+    object-fit: contain;
+    max-height: 451px;
+    border: 3px solid var(--nord10);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: all 0.2s ease-out 0.05s;
+}
+
+.project-thumbnail:hover,
+.project-thumbnail:focus {
+    filter: blur(1px);
 }
 
 .posts-list {
@@ -174,6 +199,7 @@ h6 {
     color: inherit;
     font-family: "Oxygen Mono", monospace;
     line-height: 1.15em;
+    margin-block-start: 1.5em;
 }
 
 h1 {
@@ -221,8 +247,14 @@ blockquote p {
     padding-left: 1em;
 }
 
+figure {
+    margin-inline: 10px;
+}
+
 /* Prevent image links in figure from getting the underlining */
-figure a, figure a:hover, figure a:focus {
+figure a,
+figure a:hover,
+figure a:focus {
     box-shadow: none;
 }
 
@@ -237,6 +269,18 @@ figure a, figure a:hover, figure a:focus {
         margin: 0 auto;
     }
 
+    .sidebar-nav {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        /* margin-bottom: 1em; */
+    }
+
+    .sidebar-nav-link {
+        flex: 1 1;
+        text-align: center;
+    }
+
     .headline {
         flex-direction: column;
     }
@@ -249,6 +293,10 @@ figure a, figure a:hover, figure a:focus {
 
     .project-list {
         flex-direction: column;
+    }
+
+    .project-list-entry-title-container {
+        padding: 0.5em;
     }
 
     .posts-list-entry-header-row {

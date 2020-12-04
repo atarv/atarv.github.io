@@ -6,11 +6,7 @@
     <description>Recent content in Projects on Aleksi Tarvainen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Aug 2020 11:12:56 +0300</lastBuildDate>
-    
-	<atom:link href="https://www.atarv.dev/projects/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 23 Aug 2020 11:12:56 +0300</lastBuildDate><atom:link href="https://www.atarv.dev/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>M.net listings aggregator</title>
       <link>https://www.atarv.dev/projects/mnet-aggregator/</link>
@@ -27,7 +23,7 @@ Development process I started by looking at what web scraping libraries were ava
       <pubDate>Mon, 20 Apr 2020 11:16:50 +0300</pubDate>
       
       <guid>https://www.atarv.dev/projects/chargen/</guid>
-      <description>I built this OSRIC™ compatible random character generator, not because there isn&amp;rsquo;t one or another already, but because none of them is my own 😁. It is a bit limited right now, because it only generates characters&amp;rsquo; attributes, alignments, class-race combinations and randomized levels. Maybe I will extend it by making generation of names, items, small descriptions and such possible in the future.
+      <description>I built this OSRIC™ compatible random character generator, not because there isn&amp;rsquo;t one or another already, but because none of them is my own 😁. It is a bit limited right now, because it only generates characters&#39; attributes, alignments, class-race combinations and randomized levels. Maybe I will extend it by making generation of names, items, small descriptions and such possible in the future.
 I wrote the back-end in Haskell and front-end in Elm, which both are functional programming languages.</description>
     </item>
     
