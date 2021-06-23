@@ -75,7 +75,8 @@ body {
 .sidebar-nav-link {
     max-width: 6rem;
     flex: 1 1;
-    text-align: right;
+    text-align: center;
+    align-content: center;
 }
 
 .no-shadow,
