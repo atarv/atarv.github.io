@@ -30,7 +30,7 @@ I wrote the back-end in Haskell and front-end in Elm, which both are functional 
     <item>
       <title>Vaalikartta</title>
       <link>https://www.atarv.dev/projects/vaalikartta/</link>
-      <pubDate>Fri, 27 Dec 2019 00:00:00 +0200</pubDate>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.atarv.dev/projects/vaalikartta/</guid>
       <description>Vaalikartta is a web app to explore data about Finnish parliamentary elections from 1983 to 2019. It also includes some information about each municipality and cabinets.
@@ -40,7 +40,7 @@ It is a product of the course Open Data Student Projects (TIEA207). We developed
     <item>
       <title>Homepage</title>
       <link>https://www.atarv.dev/projects/homepage/</link>
-      <pubDate>Wed, 04 Sep 2019 00:00:00 +0300</pubDate>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.atarv.dev/projects/homepage/</guid>
       <description>I started working on this site on 2019-09-04. The site is built with Hugo using its various functionalities (e.g. templates). The theme is my home brew. I call it minimus for being minimal (although bare-bones would describe it equally well).
@@ -50,7 +50,7 @@ As a side note, Hugo is based on the Go programming language, which I haven&amp;
     <item>
       <title>RPG-Dice</title>
       <link>https://www.atarv.dev/projects/rpg-dice/</link>
-      <pubDate>Fri, 05 Jul 2019 00:00:00 +0300</pubDate>
+      <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.atarv.dev/projects/rpg-dice/</guid>
       <description>I built this little app, when I was working on Helsinki university&amp;rsquo;s Fullstack MOOC 2019. I wanted to try out how Typescript pairs with React. Maybe Typescripts best parts wont&amp;rsquo;t show, when making such small apps, but I saw it&amp;rsquo;s potential. Defining types gives me a sense of safety and I much prefer compilation errors to runtime errors, which really don&amp;rsquo;t hint at eg. what could cause something to be undefined.</description>

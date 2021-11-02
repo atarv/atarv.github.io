@@ -68,15 +68,17 @@ body {
 
 .sidebar-nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin-bottom: 1em;
+    margin-left: auto;
+    max-width: 50%;
 }
 
 .sidebar-nav-link {
-    max-width: 6rem;
     flex: 1 1;
     text-align: center;
     align-content: center;
+    width: min-content;
 }
 
 .no-shadow,
@@ -221,6 +223,18 @@ a {
     transition: all 0.2s ease-out 0.05s;
 }
 
+a.active {
+    color: inherit;
+    text-decoration: none;
+    color: var(--nord1);
+    box-shadow: inset 0 -2px 0 white, inset 0 -5px 0 var(--nord10);
+    background-color: var(--nord10);
+    border-radius: 5px;
+
+    padding: 0.2em 0.3em;
+    transition: all 0.2s ease-out 0.05s;
+}
+
 a:hover,
 a:focus {
     box-shadow: inset 0 -2px 0 white, inset 0 -5px 0 var(--nord15);
@@ -272,9 +286,9 @@ figure a:focus {
 
     .sidebar-nav {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         margin: 0 auto;
-        /* margin-bottom: 1em; */
+        max-width: initial;
     }
 
     .sidebar-nav-link {
@@ -294,6 +308,14 @@ figure a:focus {
 
     .project-list {
         flex-direction: column;
+    }
+
+    .project-list-entry {
+        margin-right: 0.3em;
+    }
+
+    .project-thumbnail {
+        max-height: 230px;
     }
 
     .project-list-entry-title-container {
