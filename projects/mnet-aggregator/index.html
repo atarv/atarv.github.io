@@ -1,119 +1,46 @@
-<!DOCTYPE html>
-<html><head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/syntax.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Aleksi Tarvainen - M.net listings aggregator</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js"></script>
-    <script>
-        window.addEventListener('load', () => {
-            quicklink.listen();
-        });
-    </script>
-</head>
-<body>
-<nav class="sidebar-nav">
-        
-        
-        <div class="sidebar-nav-link">
-            <a  
-                    class="sidebar-nav-item" 
-                 
-                href="/"
-            >
-                Home
-            </a>
-        </div>
-        
-        <div class="sidebar-nav-link">
-            <a  
-                    class="sidebar-nav-item" 
-                 
-                href="/about"
-            >
-                About
-            </a>
-        </div>
-        
-        <div class="sidebar-nav-link">
-            <a  
-                    class="sidebar-nav-item" 
-                 
-                href="/posts/"
-            >
-                Posts
-            </a>
-        </div>
-        
-        <div class="sidebar-nav-link">
-            <a  
-                    class="sidebar-nav-item" 
-                 
-                href="/projects/"
-            >
-                Projects
-            </a>
-        </div>
-        
-</nav>
-<div id="content">
-<div class="headline">
-    <h2>Project: M.net listings aggregator</h2>
-    <div class="date">
-        2020-08-23
-    </div>
-</div>
-<h3 id="goal">Goal</h3>
-<p>At some point this summer I noticed that I spend too much time browsing
-through listings on <a href="http://muusikoiden.net/tori">Muusikoiden.net&rsquo;s tori</a> (a
+<!doctype html><html><head><meta charset=utf-8><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/syntax.css><meta name=viewport content="width=device-width,initial-scale=1"><title>Aleksi Tarvainen - M.net listings aggregator</title><script src=https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js></script>
+<script>window.addEventListener("load",()=>{quicklink.listen()})</script></head><body><nav class=sidebar-nav><div class=sidebar-nav-link><a class=sidebar-nav-item href=/>Home</a></div><div class=sidebar-nav-link><a class=sidebar-nav-item href=/about>About</a></div><div class=sidebar-nav-link><a class=sidebar-nav-item href=/posts/>Posts</a></div><div class=sidebar-nav-link><a class=sidebar-nav-item href=/projects/>Projects</a></div></nav><div id=content><div class=headline><h2>Project: M.net listings aggregator</h2><div class=date>2020-08-23</div></div><h3 id=goal>Goal</h3><p>At some point this summer I noticed that I spend too much time browsing
+through listings on <a href=http://muusikoiden.net/tori>Muusikoiden.net&rsquo;s tori</a> (a
 Finnish marketplace for used music gear). Of course, as a programmer the
 first thing that comes to mind is automate things, so I did. The goal was to
 develop a program that scrapes new listings from the site and sends a daily
-summary of them via email.</p>
-<h3 id="development-process">Development process</h3>
-<p>I started by looking at what web scraping libraries were available for
-Haskell. I took a look at <a href="https://www.crummy.com/software/BeautifulSoup/">Beautiful
+summary of them via email.</p><h3 id=development-process>Development process</h3><p>I started by looking at what web scraping libraries were available for
+Haskell. I took a look at <a href=https://www.crummy.com/software/BeautifulSoup/>Beautiful
 Soup</a> just in case it would
 blow me away by elegant API-design and be an excuse to get more into Python.
 Beautiful Soup&rsquo;s
-<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">documentation</a> is
+<a href=https://www.crummy.com/software/BeautifulSoup/bs4/doc/>documentation</a> is
 huge and it discouraged me somewhat. Surely it does a lot more than the
-<a href="https://hackage.haskell.org/package/scalpel">scalpel</a> package that I
+<a href=https://hackage.haskell.org/package/scalpel>scalpel</a> package that I
 ultimately chose, but for a project with a very limited scope the latter
 seemed more appealing. With hindsight, a Python project would have been
-easier to deploy.</p>
-<p>Scalpel&rsquo;s API is very declarative, so sometimes it was very hard to follow
+easier to deploy.</p><p>Scalpel&rsquo;s API is very declarative, so sometimes it was very hard to follow
 why it scraped the things it did. I had to stare at the package&rsquo;s
 documentation&rsquo;s examples for a couple of hours before I got a hang of
 it. Muusikoiden.net&rsquo;s HTML structure is from early 2000s so the layout is
 heavily based on HTML tables and that surely didn&rsquo;t help either. Still, I&rsquo;m
 pleased at how the web scraping code turned out modular, easily composable
-and pretty succinct.</p>
-<p>With web scraping part out of the way, I implemented logic for filtering
+and pretty succinct.</p><p>With web scraping part out of the way, I implemented logic for filtering
 already seen listings and how to render the scraped data back to HTML. I used
-<a href="https://hackage.haskell.org/package/blaze-html">blaze-html</a> for the latter
+<a href=https://hackage.haskell.org/package/blaze-html>blaze-html</a> for the latter
 and it was easy to use and integrated nicely. Out of curiosity I also tried
-out <a href="https://hackage.haskell.org/package/clay">Clay</a>, which is a CSS
+out <a href=https://hackage.haskell.org/package/clay>Clay</a>, which is a CSS
 preprocessor implemented as an EDSL in Haskell. It&rsquo;s type-safe way of writing
 CSS was nice, but compiling every time to see the differences wasn&rsquo;t very
 developer friendly. Maybe Clay&rsquo;s advantages come forth better in larger
 projects than mine. I didn&rsquo;t put too much effort in making the layout
-beautiful. I&rsquo;m all about functionality when making things for myself 😇.</p>
-<p>Sending email was as easy as it should be. Most of it was just defining the
-configuration. For configuration, I used <a href="https://dhall-lang.org/">Dhall</a>,
+beautiful. I&rsquo;m all about functionality when making things for myself 😇.</p><p>Sending email was as easy as it should be. Most of it was just defining the
+configuration. For configuration, I used <a href=https://dhall-lang.org/>Dhall</a>,
 which is described as a programmable configuration language, though I didn&rsquo;t
 really exploit the programmable features. I used it because it integrates
 really well with Haskell. I didn&rsquo;t have to hand-roll any logic for dealing
 with configuration files. Instead, I had to just describe the configuration
-file&rsquo;s structure and data types.</p>
-<p>The program was coming together and I began thinking about deploying it.
+file&rsquo;s structure and data types.</p><p>The program was coming together and I began thinking about deploying it.
 Initially I thought that the program would run on my Raspberry Pi and it
 would be invoked daily with a cronjob. But it turned out that the Haskell
 compiler support for ARM architectures was very limited and getting Stack
 (the Haskell build tool I use) to work on it was beyond me. This is the only
-point in the development process that I regretted choosing Haskell.</p>
-<p>It was clear that I couldn&rsquo;t host the program myself, so I started
+point in the development process that I regretted choosing Haskell.</p><p>It was clear that I couldn&rsquo;t host the program myself, so I started
 investigating how to utilize Google Cloud&rsquo;s infrastructure to make it work. I
 ended up refactoring the program to be a web app so that it could be deployed
 in a Docker container and then invoked periodically with Cloud Scheduler&rsquo;s
@@ -121,42 +48,22 @@ request. Cloud Run is server-less, so I couldn&rsquo;t depend on just dumping th
 listing numbers in a file, so I had to use a database for persistence. I
 chose Redis because it has a really simple API. The silver lining of all this
 is that now the program didn&rsquo;t depend on my hardware so up-time will probably
-be better. <small>(Raspberry Pis aren&rsquo;t known for their reliability)</small>.</p>
-<h3 id="final-thoughts">Final thoughts</h3>
-<p>It took a while to develop this project and the process wasn&rsquo;t without
+be better. <small>(Raspberry Pis aren&rsquo;t known for their reliability)</small>.</p><h3 id=final-thoughts>Final thoughts</h3><p>It took a while to develop this project and the process wasn&rsquo;t without
 setbacks, but I&rsquo;m pretty confident that the time investment will pay out
 eventually. Nowadays I don&rsquo;t really browse Muusikoiden.net anymore. I just
 wait for the summary to arrive in my inbox. I feel like while coding this
 project in Haskell strengthened my grasp on using monads and ability to
-figure out libraries.</p>
-<p><a href="https://github.com/atarv/mnet-aggregator">Source code on GitHub</a></p>
-<p>Some useless statistics:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain">---------------------------------------------------------------
- Language      Files    Lines     Code     Comments     Blanks
----------------------------------------------------------------
- Haskell          13      465      310          111         44
- Markdown          1      107      107            0          0
- Cabal             1       87       76            5          6
- Dockerfile        1       54       27           14         13
- YAML              2       69        7           57          5
----------------------------------------------------------------
- Total            18      782      527          187         68
----------------------------------------------------------------
-Updated 2020-08-23
-</code></pre></div>
-<div style="text-align: right; margin-right: 0.5em;">
-    <a href="..">Back to Projects</a>
-</div>
-
-        </div>
-<footer>
-    <div>
-        <p>
-        <hr/>
-            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>
-            &copy; 2021 Aleksi Tarvainen
-        </p>
-    </div>
-</footer>
-</body>
-</html>
+figure out libraries.</p><p><a href=https://github.com/atarv/mnet-aggregator>Source code on GitHub</a></p><p>Some useless statistics:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-plain data-lang=plain><span class=line><span class=cl>---------------------------------------------------------------
+</span></span><span class=line><span class=cl> Language      Files    Lines     Code     Comments     Blanks
+</span></span><span class=line><span class=cl>---------------------------------------------------------------
+</span></span><span class=line><span class=cl> Haskell          13      465      310          111         44
+</span></span><span class=line><span class=cl> Markdown          1      107      107            0          0
+</span></span><span class=line><span class=cl> Cabal             1       87       76            5          6
+</span></span><span class=line><span class=cl> Dockerfile        1       54       27           14         13
+</span></span><span class=line><span class=cl> YAML              2       69        7           57          5
+</span></span><span class=line><span class=cl>---------------------------------------------------------------
+</span></span><span class=line><span class=cl> Total            18      782      527          187         68
+</span></span><span class=line><span class=cl>---------------------------------------------------------------
+</span></span><span class=line><span class=cl>Updated 2020-08-23
+</span></span></code></pre></div><div style=text-align:right;margin-right:.5em><a href=..>Back to Projects</a></div></div><footer><div><p><hr><a rel=license href=http://creativecommons.org/licenses/by/4.0/>CC-BY 4.0</a>
+&copy; 2022 Aleksi Tarvainen</p></div></footer></body></html>

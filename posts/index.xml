@@ -1,21 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on Aleksi Tarvainen</title>
-    <link>https://www.atarv.dev/posts/</link>
-    <description>Recent content in Posts on Aleksi Tarvainen</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 11 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.atarv.dev/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>A December of Algorithms 2019</title>
-      <link>https://www.atarv.dev/posts/a-december-of-algorithms-2019/</link>
-      <pubDate>Sat, 11 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.atarv.dev/posts/a-december-of-algorithms-2019/</guid>
-      <description>What? A December of Algorithms 2019 was an open coding challenge organized by SVCE-ACM student chapter. For each day of the month they presented a small algorithmic programming problem. Solutions to all of the problems had to be submitted by 2020-01-10.
-Why? The holidays were approaching and I thought I&amp;rsquo;d need something to keep my little gray programming brain cells active. I was aware of Advent of Code, but I decided to do this challenge instead, because I considered it to be more approachable and doable, for sure.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Aleksi Tarvainen</title><link>https://www.atarv.dev/posts/</link><description>Recent content in Posts on Aleksi Tarvainen</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 11 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.atarv.dev/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>A December of Algorithms 2019</title><link>https://www.atarv.dev/posts/a-december-of-algorithms-2019/</link><pubDate>Sat, 11 Jan 2020 00:00:00 +0000</pubDate><guid>https://www.atarv.dev/posts/a-december-of-algorithms-2019/</guid><description>What? A December of Algorithms 2019 was an open coding challenge organized by SVCE-ACM student chapter. For each day of the month they presented a small algorithmic programming problem. Solutions to all of the problems had to be submitted by 2020-01-10.
+Why? The holidays were approaching and I thought I&amp;rsquo;d need something to keep my little gray programming brain cells active. I was aware of Advent of Code, but I decided to do this challenge instead, because I considered it to be more approachable and doable, for sure.</description></item></channel></rss>
