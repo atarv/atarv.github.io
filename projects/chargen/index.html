@@ -1,12 +1,82 @@
-<!doctype html><html><head><meta charset=utf-8><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/syntax.css><meta name=viewport content="width=device-width,initial-scale=1"><title>Aleksi Tarvainen - Chargen</title><script src=https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js></script>
-<script>window.addEventListener("load",()=>{quicklink.listen()})</script></head><body><nav class=sidebar-nav><div class=sidebar-nav-link><a class=sidebar-nav-item href=/>Home</a></div><div class=sidebar-nav-link><a class=sidebar-nav-item href=/about>About</a></div><div class=sidebar-nav-link><a class=sidebar-nav-item href=/posts/>Posts</a></div><div class=sidebar-nav-link><a class=sidebar-nav-item href=/projects/>Projects</a></div></nav><div id=content><div class=headline><h2>Project: Chargen</h2><div class=date>2020-04-20</div></div><figure><a href=https://www.atarv.dev/chargen-frontend/><img src=/images/chargen.png alt="chargen screenshot"></a></figure><p>I built this <a href=http://www.knights-n-knaves.com/osric>OSRIC</a>™ compatible
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aleksi Tarvainen - Chargen</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            quicklink.listen();
+        });
+    </script>
+</head>
+<body>
+<nav class="sidebar-nav">
+        
+        
+        <div class="sidebar-nav-link">
+            <a  
+                    class="sidebar-nav-item" 
+                 
+                href="/"
+            >
+                Home
+            </a>
+        </div>
+        
+        <div class="sidebar-nav-link">
+            <a  
+                    class="sidebar-nav-item" 
+                 
+                href="/about"
+            >
+                About
+            </a>
+        </div>
+        
+        <div class="sidebar-nav-link">
+            <a  
+                    class="sidebar-nav-item" 
+                 
+                href="/posts/"
+            >
+                Posts
+            </a>
+        </div>
+        
+        <div class="sidebar-nav-link">
+            <a  
+                    class="sidebar-nav-item" 
+                 
+                href="/projects/"
+            >
+                Projects
+            </a>
+        </div>
+        
+</nav>
+<div id="content">
+<div class="headline">
+    <h2>Project: Chargen</h2>
+    <div class="date">
+        2020-04-20
+    </div>
+</div>
+<figure><a href="https://www.atarv.dev/chargen-frontend/"><img src="/images/chargen.png"
+         alt="chargen screenshot"/></a>
+</figure>
+
+<p>I built this <a href="http://www.knights-n-knaves.com/osric">OSRIC</a>™ compatible
 random character generator, not because there isn&rsquo;t
-<a href=https://osricrpg.com/tools/index.php>one</a> or
-<a href=https://osricrpg.com/wizardawn/tool_oadvg.php>another</a> already, but because
+<a href="https://osricrpg.com/tools/index.php">one</a> or
+<a href="https://osricrpg.com/wizardawn/tool_oadvg.php">another</a> already, but because
 none of them is my own 😁. It is a bit limited right now, because it only
 generates characters&rsquo; attributes, alignments, class-race combinations and
 randomized levels. Maybe I will extend it by making generation of names,
-items, small descriptions and such possible in the future.</p><p>I wrote the back-end in Haskell and front-end in Elm, which both are functional
+items, small descriptions and such possible in the future.</p>
+<p>I wrote the back-end in Haskell and front-end in Elm, which both are functional
 programming languages. The back-end relies heavily on SQLite as I decided to
 codify game rules as such so that they could also be used easily from other
 programming languages (maybe I&rsquo;ll build more OSRIC related software).
@@ -14,11 +84,28 @@ That didn&rsquo;t turn out to be a bit problematical as SQL (or at least especia
 SQLite) has a bit peculiar behavior with generating random numbers in
 queries. So I had to write, for example, class and race restrictions in
 Haskell, which wasn&rsquo;t too bad, because I got to &ldquo;reuse&rdquo; the code in the
-front-end.</p><p>This project also made me venture into serverless computing (as it&rsquo;s hosted
+front-end.</p>
+<p>This project also made me venture into serverless computing (as it&rsquo;s hosted
 on Google Cloud Run) and Docker. I had some problems with getting the Docker
 builds to behave nicely. First I had the SQLite database as a data file,
 which Haskell stack places amongst the build files and the binary, of course,
 would use that weird path only. I had to change the program to take the
 database path as a command line argument, which wasn&rsquo;t much of a hassle.
-Now it seems to work a-ok and the hosting won&rsquo;t cost much at all.</p><div style=text-align:right;margin-right:.5em><a href=..>Back to Projects</a></div></div><footer><div><p><hr><a rel=license href=http://creativecommons.org/licenses/by/4.0/>CC-BY 4.0</a>
-&copy; 2022 Aleksi Tarvainen</p></div></footer></body></html>
+Now it seems to work a-ok and the hosting won&rsquo;t cost much at all.</p>
+
+<div style="text-align: right; margin-right: 0.5em;">
+    <a href="..">Back to Projects</a>
+</div>
+
+        </div>
+<footer>
+    <div>
+        <p>
+        <hr/>
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>
+            &copy; 2022 Aleksi Tarvainen
+        </p>
+    </div>
+</footer>
+</body>
+</html>
