@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aleksi Tarvainen - Krapu</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            quicklink.listen();
+        });
+    </script>
+</head>
+<body>
+<nav class="sidebar-nav">
+        
+        
+        <div class="sidebar-nav-link">
+            <a  
+                    class="sidebar-nav-item" 
+                 
+                href="/"
+            >
+                Home
+            </a>
+        </div>
+        
+        <div class="sidebar-nav-link">
+            <a  
+                    class="sidebar-nav-item" 
+                 
+                href="/about"
+            >
+                About
+            </a>
+        </div>
+        
+        <div class="sidebar-nav-link">
+            <a  
+                    class="sidebar-nav-item" 
+                 
+                href="/posts/"
+            >
+                Posts
+            </a>
+        </div>
+        
+        <div class="sidebar-nav-link">
+            <a  
+                    class="sidebar-nav-item" 
+                 
+                href="/projects/"
+            >
+                Projects
+            </a>
+        </div>
+        
+</nav>
+<div id="content">
+<div class="headline">
+    <h2>Project: Krapu</h2>
+    <div class="date">
+        2023-02-17
+    </div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rs" data-lang="rs"><span class="line"><span class="cl"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&#34;Hello, Krapu!&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>So if you&rsquo;re a programmer, surely you must write your own programming language
+at some point, right? I&rsquo;m not sure about that, but at least I kind of did one in
+the spring of 2021.  It&rsquo;s called <a href="https://github.com/atarv/krapu">Krapu</a>,
+because its syntax is almost copied from Rust and Rusts unofficial mascot is
+Ferris the crab. Given the name, file extension must be <code>.krap</code>, because that&rsquo;s
+all what&rsquo;s going to be written in the language. Nothing serious. This was just
+an exercise. Use it in production at your own risk.</p>
+<p>Unlike Rust, Krapu is an interpreted language with <em>optional</em> strong static
+typing. The interpreter is slow, because it&rsquo;s a tree-walking interpreter and I
+didn&rsquo;t take performance into consideration much. I focused more on implementing
+language features.</p>
+<p>So the reasons for me writing a programming language were:</p>
+<ol>
+<li>it was a task that intrigued me</li>
+<li>I&rsquo;d get college credits for doing it</li>
+<li>I&rsquo;d get to write it in Haskell</li>
+</ol>
+<p>Implementing a small programming language like this removed some magic from what
+interpreters and compilers are doing. I acquired better understaing of
+programming language concepts and vocabulary as a result of reading the
+associated literature. I also got to try out programming concepts that were (and
+still are) foreign to me, most exotic was
+<a href="https://blog.sumtypeofway.com/posts/introduction-to-recursion-schemes.html">recursion schemes</a>.</p>
+<p>Haskell was an excellent choice for this task. Parser combinators are super
+handy way for writing recursive descent parsers. Strong typing prevented some
+bugs and helped me keep the code and my thoughts coherent. Tree transformations
+are really natural to express in haskell because of pattern matching and support
+recursion. Despite these good parts, some of the semantics were pretty tricky to
+implement in Haskell, for example <code>continue</code> and <code>break</code>. There&rsquo;s no idiomatic
+alternative for these in Haskell. I ended up using monad transformers
+(<code>ExceptT</code>) and an additional state in the evaluation context.</p>
+<p>I wrote quite a lot of tests from the very beginning. With hindsight, some of
+the tests were unnecessary, since it shouldn&rsquo;t matter much what kind of a syntax
+tree is parsed from source code, rather than what it evaluates to. I&rsquo;d write so
+called <em>golden tests</em> next time.</p>
+<p>If you want to take a look at what the language looks like and maybe learn a
+little, check out
+<a href="https://github.com/atarv/krapu/blob/master/test/examples/learn.krap"><code>learn.krap</code></a>
+file in the GitHub repo.</p>
+<p>The thumbnail image for this project is a public domain clip art picture
+(<a href="https://publicdomainvectors.org/en/free-clipart/Red-crab/37498.html">source</a>)
+and it&rsquo;s in no way related to the project apart from name.</p>
+
+<div style="text-align: right; margin-right: 0.5em;">
+    <a href="..">Back to Projects</a>
+</div>
+
+        </div>
+<footer>
+    <div>
+        <p>
+        <hr/>
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>
+            &copy; 2022 Aleksi Tarvainen
+        </p>
+    </div>
+</footer>
+</body>
+</html>
