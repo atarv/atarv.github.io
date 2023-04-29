@@ -72,9 +72,94 @@ body {
     margin: 0.5em auto;
 }
 
-#subtitle {
-    opacity: 1;
-    transition: opacity 1s ease;
+#cube {
+    position: relative;
+    margin: auto;
+    transform-style: preserve-3d;
+    animation-delay: 2s;
+    animation: spin 24s linear infinite;
+    width: 20em;
+    height: 6em;
+    margin-top: 0;
+}
+
+#cube>div {
+    position: absolute;
+    transform-style: preserve-3d;
+    width: 10em;
+}
+
+#cube>div>h3 {
+    animation: un-spin 24s linear infinite;
+    max-width: 10em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#sub1 {
+    transform: translate3d(5em, 0em, 6.32em);
+}
+
+#sub1wrap {
+    animation-name: fade;
+    animation-delay: 0;
+    animation-duration: 12s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#sub2 {
+    transform: translate3d(15.47em, 0em, -3.16em);
+}
+
+#sub2wrap {
+    animation-name: fade;
+    animation-delay: -8s;
+    animation-duration: 12s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#sub3 {
+    transform: translate3d(-4.53em, 0em, -3.16em);
+}
+
+#sub3wrap {
+    animation-name: fade;
+    animation-delay: -18s;
+    animation-duration: 12s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotateX(-0.01turn) rotateY(0turn);
+    }
+
+    to {
+        transform: rotateX(-0.01turn) rotateY(1turn);
+    }
+}
+
+@keyframes un-spin {
+    from {
+        transform: rotateY(0turn);
+    }
+
+    to {
+        transform: rotateY(-1turn);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.02;
+    }
 }
 
 #subtitle.fade {
@@ -95,6 +180,14 @@ body {
     text-align: center;
     align-content: center;
     width: min-content;
+    transition-duration: 0.1s;
+}
+
+.sidebar-nav-link > a:active {
+    transition-delay: 0;
+    transition-duration: 0.2s;
+    background-color: var(--nord10);
+    border-radius: 5px;
 }
 
 .no-shadow,
@@ -124,6 +217,7 @@ body {
 .project-list-entry:first-of-type {
     margin-top: 0.5em;
 }
+
 .project-list-entry {
     flex: 1 1;
     text-align: center;
