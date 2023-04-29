@@ -97,7 +97,7 @@ body {
 }
 
 #sub1 {
-    transform: translate3d(5em, 0em, 6.32em);
+    transform: translate3d(5em, 0em, 6.7em);
 }
 
 #sub1wrap {
@@ -109,7 +109,7 @@ body {
 }
 
 #sub2 {
-    transform: translate3d(15.47em, 0em, -3.16em);
+    transform: translate3d(12.746em, 0em, -3.35em);
 }
 
 #sub2wrap {
@@ -121,7 +121,7 @@ body {
 }
 
 #sub3 {
-    transform: translate3d(-4.53em, 0em, -3.16em);
+    transform: translate3d(-0.8em, 0em, -3.35em);
 }
 
 #sub3wrap {
