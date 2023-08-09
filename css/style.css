@@ -167,6 +167,10 @@ body {
     transition: opacity 1s ease;
 }
 
+.page-title {
+    font-size: 2rem;
+}
+
 .sidebar-nav {
     display: flex;
     justify-content: space-between;
