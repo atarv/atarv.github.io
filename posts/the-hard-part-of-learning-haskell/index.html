@@ -79,9 +79,9 @@ course).</p>
 <ul>
 <li>Preferred install method is via <a href="https://www.haskell.org/ghcup/install/#installation">GHCup</a>. Supported platforms are Windows, Linux, macOS, FreeBSD and WSL2.  In addition to GHC (Glasgow Haskell compiler, the most common Haskell compiler) GHCup can install Stack and Cabal, which are programs for building and managing packages and programs and HLS (Haskell language server).</li>
 <li>It&rsquo;s advised to <em><strong>not</strong></em> install GHC via your Linux distribution&rsquo;s package manager since the repositories may have an outdated version of the compiler.</li>
-<li>How are you supposed to write Haskell?
-<ul>
-<li>You may use your preferred text editor/IDE (remember to install HLS):
+</ul>
+<h3 id="how-are-you-supposed-to-write-haskell">How are you supposed to write Haskell?</h3>
+<p>You may use your preferred text editor/IDE (remember to install HLS):</p>
 <ul>
 <li>VSCode has a really nice <a href="https://marketplace.visualstudio.com/items?itemName=haskell.haskell">Haskell plugin</a></li>
 <li>NeoVim users should check out <a href="https://github.com/MrcJkb/haskell-tools.nvim">haskell-tools.nvim</a></li>
@@ -89,50 +89,49 @@ course).</p>
 <li>Emacs has <a href="https://emacs-lsp.github.io/lsp-haskell/">lsp-haskell</a> plugin</li>
 <li>IntelliJ people can use <a href="https://plugins.jetbrains.com/plugin/8258-intellij-haskell">IntelliJ-Haskell</a></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
 <h3 id="how-do-i-do-common_operation-in-haskell">How do I do $COMMON_OPERATION in Haskell?</h3>
 <p>Some code examples to get you going.</p>
 <ul>
-<li>
-<p><strong>Read a file</strong></p>
+<li><strong>Read a file</strong>
 <ul>
 <li>Haskell has multiple types for representing strings. You should read more about them from <a href="https://mmhaskell.com/blog/2017/5/15/untangling-haskells-strings">Monday Morning Haskell</a>, since they have a few gotchas.</li>
 <li>Here are examples of reading file contents for each type:</li>
 <li><code>Text</code> from <a href="https://hackage.haskell.org/package/text">text</a> package (you most likely want to use this one)</li>
 </ul>
+</li>
+</ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hs" data-lang="hs"><span class="line"><span class="cl"><span class="kr">import</span> <span class="k">qualified</span> <span class="nn">Data.Text.IO</span> <span class="k">as</span> <span class="n">T</span>
 </span></span><span class="line"><span class="cl"><span class="nf">main</span> <span class="ow">=</span> <span class="kr">do</span>
 </span></span><span class="line"><span class="cl">  <span class="n">content</span> <span class="ow">&lt;-</span> <span class="kt">T</span><span class="o">.</span><span class="n">readFile</span> <span class="s">&#34;/path/to/file&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">print</span> <span class="n">content</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">T</span><span class="o">.</span><span class="n">putStr</span> <span class="n">content</span>
 </span></span></code></pre></div><ul>
 <li><code>ByteString</code> from <a href="https://hackage.haskell.org/package/bytestring">bytestring</a> package</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hs" data-lang="hs"><span class="line"><span class="cl"><span class="kr">import</span> <span class="k">qualified</span> <span class="nn">Data.ByteString</span> <span class="k">as</span> <span class="n">BS</span>
 </span></span><span class="line"><span class="cl"><span class="nf">main</span> <span class="ow">=</span> <span class="kr">do</span>
 </span></span><span class="line"><span class="cl">  <span class="n">content</span> <span class="ow">&lt;-</span> <span class="kt">BS</span><span class="o">.</span><span class="n">readFile</span> <span class="s">&#34;/path/to/file&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">print</span> <span class="n">content</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">BS</span><span class="o">.</span><span class="n">putStr</span> <span class="n">content</span>
 </span></span></code></pre></div><ul>
 <li><code>String</code> from Prelude (this has worse performance than others)</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hs" data-lang="hs"><span class="line"><span class="cl"><span class="nf">main</span> <span class="ow">=</span> <span class="kr">do</span>
 </span></span><span class="line"><span class="cl">  <span class="n">content</span> <span class="ow">&lt;-</span> <span class="n">readFile</span> <span class="s">&#34;/path/to/file&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">print</span> <span class="n">content</span>
-</span></span></code></pre></div></li>
-<li>
-<p><strong>Print to console</strong></p>
+</span></span><span class="line"><span class="cl">  <span class="n">putStr</span> <span class="n">content</span>
+</span></span></code></pre></div><ul>
+<li><strong>Print to console</strong>
 <ul>
 <li><code>print</code> to print a value of any type that implements the <code>Show</code> typeclass</li>
-<li><code>putStrLn</code> and <code>putStr</code> for printing string values. Note that <code>ByteString</code>s and <code>Text</code> have their own versions of these functions.</li>
+<li><code>putStrLn</code> and <code>putStr</code> for printing string values. <code>*Ln</code> adds a newline at
+the end of the string. Note that <code>ByteString</code>s and <code>Text</code> have their own
+versions of these functions.</li>
 </ul>
 </li>
-<li>
-<p><strong>Parse JSON</strong></p>
+<li><strong>Parse JSON</strong>
 <ul>
 <li><a href="https://hackage.haskell.org/package/aeson">Aeson</a> is pretty much the standard for handling JSON (de)serialization</li>
 <li>There&rsquo;s a great <a href="https://williamyaoh.com/posts/2019-10-19-a-cheatsheet-to-json-handling.html">tutorial for Aeson</a> on William Yaoh&rsquo;s blog</li>
+</ul>
+</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hs" data-lang="hs"><span class="line"><span class="cl"><span class="cm">{-# LANGUAGE DeriveGeneric #-}</span>
 </span></span><span class="line"><span class="cl"><span class="cm">{-# LANGUAGE OverloadedStrings #-}</span>
@@ -149,15 +148,16 @@ course).</p>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nf">main</span> <span class="ow">=</span> <span class="kr">do</span>
 </span></span><span class="line"><span class="cl">  <span class="kr">let</span> <span class="p">(</span><span class="kt">Just</span> <span class="n">f</span><span class="p">)</span> <span class="ow">=</span> 
-</span></span><span class="line"><span class="cl">       <span class="n">decode</span> <span class="s">&#34;{</span><span class="se">\&#34;</span><span class="s">name</span><span class="se">\&#34;</span><span class="s">:</span><span class="se">\&#34;</span><span class="s">JSON</span><span class="se">\&#34;</span><span class="s">,</span><span class="se">\&#34;</span><span class="s">fileExtension</span><span class="se">\&#34;</span><span class="s">:</span><span class="se">\&#34;</span><span class="s">.json</span><span class="se">\&#34;</span><span class="s">}&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">decode</span> <span class="s">&#34;{</span><span class="se">\&#34;</span><span class="s">name</span><span class="se">\&#34;</span><span class="s">:</span><span class="se">\&#34;</span><span class="s">JSON</span><span class="se">\&#34;</span><span class="s">,</span><span class="se">\&#34;</span><span class="s">fileExtension</span><span class="se">\&#34;</span><span class="s">:</span><span class="se">\&#34;</span><span class="s">.json</span><span class="se">\&#34;</span><span class="s">}&#34;</span>
 </span></span><span class="line"><span class="cl">  <span class="n">print</span> <span class="p">(</span><span class="n">f</span> <span class="ow">::</span> <span class="kt">Format</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="n">print</span> <span class="o">$</span> <span class="n">encode</span> <span class="n">f</span>
-</span></span></code></pre></div></li>
-<li>
-<p>Datetime handling</p>
+</span></span></code></pre></div><ul>
+<li><strong>Datetime handling</strong>
 <ul>
 <li><a href="https://hackage.haskell.org/package/time"><code>time</code></a> library</li>
 <li>Check out William Yaoh&rsquo;s excellent <a href="https://williamyaoh.com/posts/2019-09-16-time-cheatsheet.html">cheatsheet</a></li>
+</ul>
+</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hs" data-lang="hs"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nn">Data.Time</span>
 </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nn">Data.Time.Format.ISO8601</span>
@@ -167,24 +167,21 @@ course).</p>
 </span></span><span class="line"><span class="cl">  <span class="n">past</span> <span class="ow">&lt;-</span> <span class="n">iso8601ParseM</span> <span class="s">&#34;2025-01-25T14:15:00.000Z&#34;</span> <span class="ow">::</span> <span class="kt">IO</span> <span class="kt">UTCTime</span>
 </span></span><span class="line"><span class="cl">  <span class="n">print</span> <span class="n">past</span>
 </span></span><span class="line"><span class="cl">  <span class="n">print</span> <span class="o">$</span> <span class="n">diffUTCTime</span> <span class="n">past</span> <span class="n">now</span>
-</span></span></code></pre></div></li>
-<li>
-<p>Common datastructures that are not part of the Prelude</p>
+</span></span></code></pre></div><ul>
+<li><strong>Common datastructures</strong> (that are not part of the Prelude)
 <ul>
 <li><a href="https://hackage.haskell.org/package/vector"><code>vector</code></a> for efficient resizeable lists</li>
 <li><a href="https://hackage.haskell.org/package/containers"><code>containers</code></a> has maps, sequences and sets, tree, and graph</li>
 <li><a href="https://hackage.haskell.org/package/unordered-containers"><code>unordered-containers</code></a> has more efficient versions of the above if your use case doesn&rsquo;t require ordering</li>
 </ul>
 </li>
-<li>
-<p>HTTP requests</p>
+<li><strong>HTTP requests</strong>
 <ul>
 <li>Standard solution seems to be <a href="https://hackage.haskell.org/package/http-client"><code>http-client</code></a> and <a href="https://hackage.haskell.org/package/http-client-tls"><code>http-client-tls</code></a> (for HTTPS requests)</li>
 <li>A higher level interface that&rsquo;s based on the above libraries is <a href="https://hackage.haskell.org/package/wreq"><code>wreq</code></a></li>
 </ul>
 </li>
-<li>
-<p>Web server</p>
+<li><strong>Web server</strong>
 <ul>
 <li><a href="https://hackage.haskell.org/package/scotty">Scotty</a> is probably the most approachable web framework for Haskell</li>
 <li><a href="https://hackage.haskell.org/package/servant">Servant</a> is more widely used and has cool typesafe API</li>
@@ -201,19 +198,17 @@ course).</p>
 </ul>
 </li>
 <li>lazy evaluation (<code>foldl</code> vs <code>foldl'</code>)</li>
-<li>What are the things that are just different enough from what I’m used to that will confuse me? What will trip me up every time I switch back to a different language?
+</ul>
+<h3 id="what-are-the-things-that-are-just-different-enough-from-what-im-used-to-that-will-confuse-me">What are the things that are just different enough from what I’m used to that will confuse me?</h3>
 <ul>
 <li>Immutability. Many other languages let you mutate variables, but Haskell is pure and immutable.</li>
 <li>Lazy evaluation. This can cause memory leak issues if you&rsquo;re not careful.</li>
 <li>unary minus vs binary minus (you need to wrap the negative number in parentheses)</li>
 </ul>
-</li>
-<li>What parts of the core language should I avoid at all costs?
+<h3 id="what-parts-of-the-core-language-should-i-avoid-at-all-costs">What parts of the core language should I avoid at all costs?</h3>
 <ul>
 <li><code>String</code>, although it&rsquo;s sometimes required. Avoid where possible.</li>
 <li>See <a href="https://github.com/sdiehl/wiwinwlh/blob/master/tutorial.md#what-to-avoid">relevant section from WIWINWLH</a></li>
-</ul>
-</li>
 </ul>
 <h3 id="how-to-get-help">How to get help?</h3>
 <p>There&rsquo;s active Haskell communities in the following mediums:
@@ -268,38 +263,35 @@ course).</p>
 </ul>
 <h3 id="how-am-i-supposed-to-properly-organize-my-project-files">How am I supposed to “properly” organize my project files?</h3>
 <p>This is explained well by <a href="https://github.com/sdiehl/wiwinwlh/blob/master/tutorial.md#project-structure">Steph Diehl</a>.</p>
-<h3 id="so-the-language-community">So… the language community.</h3>
-<ul>
-<li>What innocuous-seeming topics always turn into a flamewar? Is my question even safe to ask?
+<h3 id="so-the-language-community">So… the language community</h3>
+<blockquote>
+<p>What innocuous-seeming topics always turn into a flamewar? Is my question even safe to ask?</p>
+</blockquote>
 <ul>
 <li>People can be very opinionated on formatting styles of Haskell source code</li>
 <li>Using <code>cabal</code> vs <code>stack</code> for package management</li>
 <li>I&rsquo;d expect the discussion to remain civil and constructive regardless of the topic!</li>
 </ul>
-</li>
-<li>Now they’re explaining something way above my head. Is this necessary to get, or are they just cursed with knowledge?
-<ul>
-<li>You&rsquo;ll see a lot of math and category theory jargon (learning them is usually not essential, but might be interesting)</li>
-</ul>
-</li>
-<li>What opinions do they have on other programming languages? Are they going to look down on me for writing a lot of Python?
-<ul>
-<li>You won&rsquo;t get looked down. The community is small and even slightest interest is usually very welcome.</li>
-</ul>
-</li>
-<li>Do they think I’m subhuman scum for using Windows?
-<ul>
-<li>No, although the experience on (native) Windows may be a bit rough, some libraries may not work etc. Generally Linux is more widely used in the community. WSL might work just fine, but I don&rsquo;t have any Haskell development experience on Windows.</li>
-</ul>
-</li>
-<li>What are all these in-jokes supposed to be?
+<blockquote>
+<p>Now they’re explaining something way above my head. Is this necessary to get, or are they just cursed with knowledge?</p>
+</blockquote>
+<p>You&rsquo;ll see a lot of math and category theory jargon (learning them is usually not essential, but might be interesting).</p>
+<blockquote>
+<p>What opinions do they have on other programming languages? Are they going to look down on me for writing a lot of Python?</p>
+</blockquote>
+<p>You won&rsquo;t get looked down. The community is small and even slightest interest is usually very welcome.</p>
+<blockquote>
+<p>Do they think I’m subhuman scum for using Windows?</p>
+</blockquote>
+<p>No, although the experience on (native) Windows may be a bit rough, some libraries may not work etc. Generally Linux is more widely used in the community. WSL might work just fine, but I don&rsquo;t have any Haskell development experience on Windows.</p>
+<blockquote>
+<p>What are all these in-jokes supposed to be?</p>
+</blockquote>
 <ul>
 <li>Monads are burritos (originates from a couple of <a href="https://byorgey.wordpress.com/2009/01/12/abstraction-intuition-and-the-monad-tutorial-fallacy/">blog</a> <a href="https://blog.plover.com/prog/burritos.html">posts</a>)</li>
 <li>Just a monoid in the category of endofunctors. What&rsquo;s so hard about it? (<a href="https://stackoverflow.com/a/3870310">origin explained + a monoid tutorial</a>)</li>
 <li>Monad tutorials are everywhere</li>
 <li>Unofficial Haskell slogan <a href="https://haskell.foundation/whitepaper/">&ldquo;Avoid success at all costs&rdquo;</a></li>
-</ul>
-</li>
 </ul>
 <h3 id="conclusion">Conclusion</h3>
 <p>My goal for writing this post was to get a better understanding of the Haskell ecosystem and community from a beginner&rsquo;s perspective. I consider myself an intermediate Haskeller, but I&rsquo;m continuously learning. I hope you found this post helpful!</p>
