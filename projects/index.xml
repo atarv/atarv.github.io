@@ -4,66 +4,44 @@
     <title>Projects on Aleksi Tarvainen</title>
     <link>https://www.atarv.dev/projects/</link>
     <description>Recent content in Projects on Aleksi Tarvainen</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Feb 2023 20:28:23 +0200</lastBuildDate><atom:link href="https://www.atarv.dev/projects/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Krapu</title>
-      <link>https://www.atarv.dev/projects/krapu/</link>
-      <pubDate>Fri, 17 Feb 2023 20:28:23 +0200</pubDate>
-      
-      <guid>https://www.atarv.dev/projects/krapu/</guid>
-      <description>fn main() { println(&amp;#34;Hello, Krapu!&amp;#34;); } So if you&amp;rsquo;re a programmer, surely you must write your own programming language at some point, right? I&amp;rsquo;m not sure about that, but at least I kind of did one in the spring of 2021. It&amp;rsquo;s called Krapu, because its syntax is almost copied from Rust and Rusts unofficial mascot is Ferris the crab. Given the name, file extension must be .krap, because that&amp;rsquo;s all what&amp;rsquo;s going to be written in the language.</description>
-    </item>
-    
+    <lastBuildDate>Sun, 23 Aug 2020 11:12:56 +0300</lastBuildDate>
+    <atom:link href="https://www.atarv.dev/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>M.net listings aggregator</title>
       <link>https://www.atarv.dev/projects/mnet-aggregator/</link>
       <pubDate>Sun, 23 Aug 2020 11:12:56 +0300</pubDate>
-      
       <guid>https://www.atarv.dev/projects/mnet-aggregator/</guid>
-      <description>Goal At some point this summer I noticed that I spend too much time browsing through listings on Muusikoiden.net&amp;rsquo;s tori (a Finnish marketplace for used music gear). Of course, as a programmer the first thing that comes to mind is automate things, so I did. The goal was to develop a program that scrapes new listings from the site and sends a daily summary of them via email.
-Development process I started by looking at what web scraping libraries were available for Haskell.</description>
+      <description>&lt;h3 id=&#34;goal&#34;&gt;Goal&lt;/h3&gt;&#xA;&lt;p&gt;At some point this summer I noticed that I spend too much time browsing&#xA;through listings on &lt;a href=&#34;http://muusikoiden.net/tori&#34;&gt;Muusikoiden.net&amp;rsquo;s tori&lt;/a&gt; (a&#xA;Finnish marketplace for used music gear). Of course, as a programmer the&#xA;first thing that comes to mind is automate things, so I did. The goal was to&#xA;develop a program that scrapes new listings from the site and sends a daily&#xA;summary of them via email.&lt;/p&gt;&#xA;&lt;h3 id=&#34;development-process&#34;&gt;Development process&lt;/h3&gt;&#xA;&lt;p&gt;I started by looking at what web scraping libraries were available for&#xA;Haskell. I took a look at &lt;a href=&#34;https://www.crummy.com/software/BeautifulSoup/&#34;&gt;Beautiful&#xA;Soup&lt;/a&gt; just in case it would&#xA;blow me away by elegant API-design and be an excuse to get more into Python.&#xA;Beautiful Soup&amp;rsquo;s&#xA;&lt;a href=&#34;https://www.crummy.com/software/BeautifulSoup/bs4/doc/&#34;&gt;documentation&lt;/a&gt; is&#xA;huge and it discouraged me somewhat. Surely it does a lot more than the&#xA;&lt;a href=&#34;https://hackage.haskell.org/package/scalpel&#34;&gt;scalpel&lt;/a&gt; package that I&#xA;ultimately chose, but for a project with a very limited scope the latter&#xA;seemed more appealing. With hindsight, a Python project would have been&#xA;easier to deploy.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Chargen</title>
       <link>https://www.atarv.dev/projects/chargen/</link>
       <pubDate>Mon, 20 Apr 2020 11:16:50 +0300</pubDate>
-      
       <guid>https://www.atarv.dev/projects/chargen/</guid>
-      <description>I built this OSRIC™ compatible random character generator, not because there isn&amp;rsquo;t one or another already, but because none of them is my own 😁. It is a bit limited right now, because it only generates characters&amp;rsquo; attributes, alignments, class-race combinations and randomized levels. Maybe I will extend it by making generation of names, items, small descriptions and such possible in the future.
-I wrote the back-end in Haskell and front-end in Elm, which both are functional programming languages.</description>
+      <description>&lt;figure&gt;&lt;a href=&#34;https://www.atarv.dev/chargen-frontend/&#34;&gt;&lt;img src=&#34;https://www.atarv.dev/images/chargen.png&#34;&#xA;    alt=&#34;chargen screenshot&#34;&gt;&lt;/a&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I built this &lt;a href=&#34;http://www.knights-n-knaves.com/osric&#34;&gt;OSRIC&lt;/a&gt;™ compatible&#xA;random character generator, not because there isn&amp;rsquo;t&#xA;&lt;a href=&#34;https://osricrpg.com/tools/index.php&#34;&gt;one&lt;/a&gt; or&#xA;&lt;a href=&#34;https://osricrpg.com/wizardawn/tool_oadvg.php&#34;&gt;another&lt;/a&gt; already, but because&#xA;none of them is my own 😁. It is a bit limited right now, because it only&#xA;generates characters&amp;rsquo; attributes, alignments, class-race combinations and&#xA;randomized levels. Maybe I will extend it by making generation of names,&#xA;items, small descriptions and such possible in the future.&lt;/p&gt;&#xA;&lt;p&gt;I wrote the back-end in Haskell and front-end in Elm, which both are functional&#xA;programming languages. The back-end relies heavily on SQLite as I decided to&#xA;codify game rules as such so that they could also be used easily from other&#xA;programming languages (maybe I&amp;rsquo;ll build more OSRIC related software).&#xA;That didn&amp;rsquo;t turn out to be a bit problematical as SQL (or at least especially&#xA;SQLite) has a bit peculiar behavior with generating random numbers in&#xA;queries. So I had to write, for example, class and race restrictions in&#xA;Haskell, which wasn&amp;rsquo;t too bad, because I got to &amp;ldquo;reuse&amp;rdquo; the code in the&#xA;front-end.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Vaalikartta</title>
       <link>https://www.atarv.dev/projects/vaalikartta/</link>
       <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://www.atarv.dev/projects/vaalikartta/</guid>
-      <description>Vaalikartta is a web app to explore data about Finnish parliamentary elections from 1983 to 2019. It also includes some information about each municipality and cabinets.
-It is a product of the course Open Data Student Projects (TIEA207). We developed the app in a group of four students. I took care of extracting most of the data and developing the back-end API. We didn&amp;rsquo;t have any designated project manager, but our project board was managed mostly by me.</description>
+      <description>&lt;figure&gt;&lt;a href=&#34;http://vaalikartta.appspot.com&#34;&gt;&lt;img src=&#34;https://www.atarv.dev/images/vaalikartta.png&#34;&#xA;    alt=&#34;vaalikartta screenshot&#34;&gt;&lt;/a&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;&lt;a href=&#34;http://vaalikartta.appspot.com/&#34;&gt;Vaalikartta&lt;/a&gt; is a web app to explore data&#xA;about Finnish parliamentary elections from 1983 to 2019. It also&#xA;includes some information about each municipality and cabinets.&lt;/p&gt;&#xA;&lt;p&gt;It is a product of the course Open Data Student Projects (TIEA207). We&#xA;developed the app in a group of four students. I took care of extracting most&#xA;of the data and developing the back-end API. We didn&amp;rsquo;t have any designated&#xA;project manager, but our project board was managed mostly by me. Also, I was&#xA;responsible for automating of the deploying process, so I guess I was the teams&#xA;DevOps guy too.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Homepage</title>
       <link>https://www.atarv.dev/projects/homepage/</link>
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://www.atarv.dev/projects/homepage/</guid>
-      <description>I started working on this site on 2019-09-04. The site is built with Hugo using its various functionalities (e.g. templates). The theme is my home brew. I call it minimus for being minimal (although bare-bones would describe it equally well).
-As a side note, Hugo is based on the Go programming language, which I haven&amp;rsquo;t particularly used at all, but it seemed the best alternative of the static site generators I know of (Jekyll, Hakyll, Gatsby.</description>
+      <description>&lt;p&gt;I started working on this site on 2019-09-04. The site is built with Hugo&#xA;using its various functionalities (e.g. templates). The theme is my home brew.&#xA;I call it minimus for being &lt;em&gt;minimal&lt;/em&gt; (although &lt;em&gt;bare-bones&lt;/em&gt; would describe it&#xA;equally well).&lt;/p&gt;&#xA;&lt;p&gt;As a side note, Hugo is based on the Go programming language,&#xA;which I haven&amp;rsquo;t particularly used at all, but it seemed the best alternative of&#xA;the static site generators I know of (Jekyll, Hakyll, Gatsby.js, Pelican). It&#xA;took some work to wrap my head around how to make it work for me. Surely it&#xA;would have been easier to use a premade theme, but where&amp;rsquo;s the fun in that? 😁&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>RPG-Dice</title>
       <link>https://www.atarv.dev/projects/rpg-dice/</link>
       <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://www.atarv.dev/projects/rpg-dice/</guid>
-      <description>I built this little app, when I was working on Helsinki university&amp;rsquo;s Fullstack MOOC 2019. I wanted to try out how Typescript pairs with React. Maybe Typescripts best parts wont&amp;rsquo;t show, when making such small apps, but I saw it&amp;rsquo;s potential. Defining types gives me a sense of safety and I much prefer compilation errors to runtime errors, which really don&amp;rsquo;t hint at eg. what could cause something to be undefined.</description>
+      <description>&lt;figure&gt;&lt;a href=&#34;http://www.atarv.dev/rpg-dice/&#34;&gt;&lt;img src=&#34;https://www.atarv.dev/images/diceroller.png&#34;&#xA;    alt=&#34;diceroller screenshot&#34;&gt;&lt;/a&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I built this little app, when I was working on Helsinki university&amp;rsquo;s&#xA;Fullstack MOOC 2019. I wanted to try out how Typescript pairs with React.&#xA;Maybe Typescripts best parts wont&amp;rsquo;t show, when making such small apps, but I&#xA;saw it&amp;rsquo;s potential. Defining types gives me a sense of safety and I much&#xA;prefer compilation errors to runtime errors, which really don&amp;rsquo;t hint at eg.&#xA;what could cause something to be &lt;code&gt;undefined&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -4,18 +4,23 @@
     <title>Posts on Aleksi Tarvainen</title>
     <link>https://www.atarv.dev/posts/</link>
     <description>Recent content in Posts on Aleksi Tarvainen</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.atarv.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.atarv.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Hard Part of Learning Haskell</title>
+      <link>https://www.atarv.dev/posts/the-hard-part-of-learning-haskell/</link>
+      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.atarv.dev/posts/the-hard-part-of-learning-haskell/</guid>
+      <description>&lt;p&gt;I got inspired by a blog post &lt;a href=&#34;https://www.hillelwayne.com/post/learning-a-language/&#34;&gt;The Hard Part of Learning a&#xA;Language&lt;/a&gt; by Hillel&#xA;Wayne. Now, obviously, one of my favourite programming languages is Haskell and&#xA;I wanted to answer the questions raised on the blog post to my best effort. I&amp;rsquo;ve&#xA;been using Haskell for personal projects and programming tasks for a bit over&#xA;two years now, which probably doesn&amp;rsquo;t make me the most qualified person to do&#xA;this, but I&amp;rsquo;ll give it a go. Rather than giving complete answers on all but the&#xA;simplest cases, I&amp;rsquo;ll try to lead you to other resources. If you have any&#xA;suggestions, please send them by email and I&amp;rsquo;ll have them added (accredited, of&#xA;course).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>A December of Algorithms 2019</title>
       <link>https://www.atarv.dev/posts/a-december-of-algorithms-2019/</link>
       <pubDate>Sat, 11 Jan 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://www.atarv.dev/posts/a-december-of-algorithms-2019/</guid>
-      <description>What? A December of Algorithms 2019 was an open coding challenge organized by SVCE-ACM student chapter. For each day of the month they presented a small algorithmic programming problem. Solutions to all of the problems had to be submitted by 2020-01-10.
-Why? The holidays were approaching and I thought I&amp;rsquo;d need something to keep my little gray programming brain cells active. I was aware of Advent of Code, but I decided to do this challenge instead, because I considered it to be more approachable and doable, for sure.</description>
+      <description>&lt;h3 id=&#34;what&#34;&gt;What?&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/atarv/A-December-of-Algorithms-2019&#34;&gt;A December of Algorithms&#xA;2019&lt;/a&gt; was an open&#xA;coding challenge organized by SVCE-ACM student chapter. For each day of the&#xA;month they presented a small algorithmic programming problem. Solutions to&#xA;all of the problems had to be submitted by 2020-01-10.&lt;/p&gt;&#xA;&lt;h3 id=&#34;why&#34;&gt;Why?&lt;/h3&gt;&#xA;&lt;p&gt;The holidays were approaching and I thought I&amp;rsquo;d need something to keep my&#xA;little gray programming brain cells active. I was aware of &lt;a href=&#34;https://adventofcode.com/2019&#34;&gt;Advent of&#xA;Code&lt;/a&gt;, but I decided to do this challenge&#xA;instead, because I considered it to be more approachable and doable, for&#xA;sure. The algorithms that were chosen for the problems turned out to be&#xA;fairly well-known and traditional, which, from a perspective of a student,&#xA;was nice.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

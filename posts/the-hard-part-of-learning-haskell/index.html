@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aleksi Tarvainen - The Hard Part of Learning Haskell</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            quicklink.listen();
+        });
+    </script>
+</head>
+<body>
+<nav class="sidebar-nav">
+        
+        
+        <div class="sidebar-nav-link">
+            <a  
+                    class="sidebar-nav-item" 
+                 
+                href="/"
+            >
+                Home
+            </a>
+        </div>
+        
+        <div class="sidebar-nav-link">
+            <a  
+                    class="sidebar-nav-item" 
+                 
+                href="/about"
+            >
+                About
+            </a>
+        </div>
+        
+        <div class="sidebar-nav-link">
+            <a  
+                    class="sidebar-nav-item" 
+                 
+                href="/posts/"
+            >
+                Posts
+            </a>
+        </div>
+        
+        <div class="sidebar-nav-link">
+            <a  
+                    class="sidebar-nav-item" 
+                 
+                href="/projects/"
+            >
+                Projects
+            </a>
+        </div>
+        
+</nav>
+<div id="content">
+<div class="headline">
+    <h2>The Hard Part of Learning Haskell</h2>
+    <div class="date">
+        2025-01-25
+    </div>
+</div>
+<p>I got inspired by a blog post <a href="https://www.hillelwayne.com/post/learning-a-language/">The Hard Part of Learning a
+Language</a> by Hillel
+Wayne. Now, obviously, one of my favourite programming languages is Haskell and
+I wanted to answer the questions raised on the blog post to my best effort. I&rsquo;ve
+been using Haskell for personal projects and programming tasks for a bit over
+two years now, which probably doesn&rsquo;t make me the most qualified person to do
+this, but I&rsquo;ll give it a go. Rather than giving complete answers on all but the
+simplest cases, I&rsquo;ll try to lead you to other resources. If you have any
+suggestions, please send them by email and I&rsquo;ll have them added (accredited, of
+course).</p>
+<h3 id="how-do-you-install-haskell">How do you install Haskell?</h3>
+<ul>
+<li>Preferred install method is via <a href="https://www.haskell.org/ghcup/install/#installation">GHCup</a>. Supported platforms are Windows, Linux, macOS, FreeBSD and WSL2.  In addition to GHC (Glasgow Haskell compiler, the most common Haskell compiler) GHCup can install Stack and Cabal, which are programs for building and managing packages and programs and HLS (Haskell language server).</li>
+<li>It&rsquo;s advised to <em><strong>not</strong></em> install GHC via your Linux distribution&rsquo;s package manager since the repositories may have an outdated version of the compiler.</li>
+<li>How are you supposed to write Haskell?
+<ul>
+<li>You may use your preferred text editor/IDE (remember to install HLS):
+<ul>
+<li>VSCode has a really nice <a href="https://marketplace.visualstudio.com/items?itemName=haskell.haskell">Haskell plugin</a></li>
+<li>NeoVim users should check out <a href="https://github.com/MrcJkb/haskell-tools.nvim">haskell-tools.nvim</a></li>
+<li>For Vim there&rsquo;s <a href="https://github.com/neoclide/coc.nvim">coc.vim</a></li>
+<li>Emacs has <a href="https://emacs-lsp.github.io/lsp-haskell/">lsp-haskell</a> plugin</li>
+<li>IntelliJ people can use <a href="https://plugins.jetbrains.com/plugin/8258-intellij-haskell">IntelliJ-Haskell</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="how-do-i-do-common_operation-in-haskell">How do I do $COMMON_OPERATION in Haskell?</h3>
+<p>Some code examples to get you going.</p>
+<ul>
+<li>
+<p><strong>Read a file</strong></p>
+<ul>
+<li>Haskell has multiple types for representing strings. You should read more about them from <a href="https://mmhaskell.com/blog/2017/5/15/untangling-haskells-strings">Monday Morning Haskell</a>, since they have a few gotchas.</li>
+<li>Here are examples of reading file contents for each type:</li>
+<li><code>Text</code> from <a href="https://hackage.haskell.org/package/text">text</a> package (you most likely want to use this one)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hs" data-lang="hs"><span class="line"><span class="cl"><span class="kr">import</span> <span class="k">qualified</span> <span class="nn">Data.Text.IO</span> <span class="k">as</span> <span class="n">T</span>
+</span></span><span class="line"><span class="cl"><span class="nf">main</span> <span class="ow">=</span> <span class="kr">do</span>
+</span></span><span class="line"><span class="cl">  <span class="n">content</span> <span class="ow">&lt;-</span> <span class="kt">T</span><span class="o">.</span><span class="n">readFile</span> <span class="s">&#34;/path/to/file&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">print</span> <span class="n">content</span>
+</span></span></code></pre></div><ul>
+<li><code>ByteString</code> from <a href="https://hackage.haskell.org/package/bytestring">bytestring</a> package</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hs" data-lang="hs"><span class="line"><span class="cl"><span class="kr">import</span> <span class="k">qualified</span> <span class="nn">Data.ByteString</span> <span class="k">as</span> <span class="n">BS</span>
+</span></span><span class="line"><span class="cl"><span class="nf">main</span> <span class="ow">=</span> <span class="kr">do</span>
+</span></span><span class="line"><span class="cl">  <span class="n">content</span> <span class="ow">&lt;-</span> <span class="kt">BS</span><span class="o">.</span><span class="n">readFile</span> <span class="s">&#34;/path/to/file&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">print</span> <span class="n">content</span>
+</span></span></code></pre></div><ul>
+<li><code>String</code> from Prelude (this has worse performance than others)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hs" data-lang="hs"><span class="line"><span class="cl"><span class="nf">main</span> <span class="ow">=</span> <span class="kr">do</span>
+</span></span><span class="line"><span class="cl">  <span class="n">content</span> <span class="ow">&lt;-</span> <span class="n">readFile</span> <span class="s">&#34;/path/to/file&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">print</span> <span class="n">content</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Print to console</strong></p>
+<ul>
+<li><code>print</code> to print a value of any type that implements the <code>Show</code> typeclass</li>
+<li><code>putStrLn</code> and <code>putStr</code> for printing string values. Note that <code>ByteString</code>s and <code>Text</code> have their own versions of these functions.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parse JSON</strong></p>
+<ul>
+<li><a href="https://hackage.haskell.org/package/aeson">Aeson</a> is pretty much the standard for handling JSON (de)serialization</li>
+<li>There&rsquo;s a great <a href="https://williamyaoh.com/posts/2019-10-19-a-cheatsheet-to-json-handling.html">tutorial for Aeson</a> on William Yaoh&rsquo;s blog</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hs" data-lang="hs"><span class="line"><span class="cl"><span class="cm">{-# LANGUAGE DeriveGeneric #-}</span>
+</span></span><span class="line"><span class="cl"><span class="cm">{-# LANGUAGE OverloadedStrings #-}</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nn">Data.Aeson</span> <span class="p">(</span><span class="nf">encode</span><span class="p">,</span> <span class="nf">decode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nn">GHC.Generics</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">data</span> <span class="kt">Format</span> <span class="ow">=</span> <span class="kt">Format</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">{</span> <span class="n">name</span> <span class="ow">::</span> <span class="kt">String</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span> <span class="n">fileExtension</span> <span class="ow">::</span> <span class="kt">String</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="kr">deriving</span> <span class="p">(</span><span class="kt">Show</span><span class="p">,</span> <span class="kt">Generic</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">instance</span> <span class="kt">FromJSON</span> <span class="kt">Format</span>
+</span></span><span class="line"><span class="cl"><span class="kr">instance</span> <span class="kt">ToJSON</span> <span class="kt">Format</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">main</span> <span class="ow">=</span> <span class="kr">do</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">let</span> <span class="p">(</span><span class="kt">Just</span> <span class="n">f</span><span class="p">)</span> <span class="ow">=</span> 
+</span></span><span class="line"><span class="cl">       <span class="n">decode</span> <span class="s">&#34;{</span><span class="se">\&#34;</span><span class="s">name</span><span class="se">\&#34;</span><span class="s">:</span><span class="se">\&#34;</span><span class="s">JSON</span><span class="se">\&#34;</span><span class="s">,</span><span class="se">\&#34;</span><span class="s">fileExtension</span><span class="se">\&#34;</span><span class="s">:</span><span class="se">\&#34;</span><span class="s">.json</span><span class="se">\&#34;</span><span class="s">}&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">print</span> <span class="p">(</span><span class="n">f</span> <span class="ow">::</span> <span class="kt">Format</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">print</span> <span class="o">$</span> <span class="n">encode</span> <span class="n">f</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Datetime handling</p>
+<ul>
+<li><a href="https://hackage.haskell.org/package/time"><code>time</code></a> library</li>
+<li>Check out William Yaoh&rsquo;s excellent <a href="https://williamyaoh.com/posts/2019-09-16-time-cheatsheet.html">cheatsheet</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hs" data-lang="hs"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nn">Data.Time</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nn">Data.Time.Format.ISO8601</span>
+</span></span><span class="line"><span class="cl"><span class="nf">main</span> <span class="ow">=</span> <span class="kr">do</span>
+</span></span><span class="line"><span class="cl">  <span class="n">now</span> <span class="ow">&lt;-</span> <span class="n">getCurrentTime</span>
+</span></span><span class="line"><span class="cl">  <span class="n">print</span> <span class="n">now</span>
+</span></span><span class="line"><span class="cl">  <span class="n">past</span> <span class="ow">&lt;-</span> <span class="n">iso8601ParseM</span> <span class="s">&#34;2025-01-25T14:15:00.000Z&#34;</span> <span class="ow">::</span> <span class="kt">IO</span> <span class="kt">UTCTime</span>
+</span></span><span class="line"><span class="cl">  <span class="n">print</span> <span class="n">past</span>
+</span></span><span class="line"><span class="cl">  <span class="n">print</span> <span class="o">$</span> <span class="n">diffUTCTime</span> <span class="n">past</span> <span class="n">now</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Common datastructures that are not part of the Prelude</p>
+<ul>
+<li><a href="https://hackage.haskell.org/package/vector"><code>vector</code></a> for efficient resizeable lists</li>
+<li><a href="https://hackage.haskell.org/package/containers"><code>containers</code></a> has maps, sequences and sets, tree, and graph</li>
+<li><a href="https://hackage.haskell.org/package/unordered-containers"><code>unordered-containers</code></a> has more efficient versions of the above if your use case doesn&rsquo;t require ordering</li>
+</ul>
+</li>
+<li>
+<p>HTTP requests</p>
+<ul>
+<li>Standard solution seems to be <a href="https://hackage.haskell.org/package/http-client"><code>http-client</code></a> and <a href="https://hackage.haskell.org/package/http-client-tls"><code>http-client-tls</code></a> (for HTTPS requests)</li>
+<li>A higher level interface that&rsquo;s based on the above libraries is <a href="https://hackage.haskell.org/package/wreq"><code>wreq</code></a></li>
+</ul>
+</li>
+<li>
+<p>Web server</p>
+<ul>
+<li><a href="https://hackage.haskell.org/package/scotty">Scotty</a> is probably the most approachable web framework for Haskell</li>
+<li><a href="https://hackage.haskell.org/package/servant">Servant</a> is more widely used and has cool typesafe API</li>
+<li><a href="https://hackage.haskell.org/package/yesod">Yesod</a> is a more opinionated web framework</li>
+</ul>
+</li>
+</ul>
+<h3 id="what-are-the-language-quirks-that-will-cost-me-an-hour-to-discover">What are the language quirks that will cost me an hour to discover?</h3>
+<ul>
+<li>Non-total functions in Prelude, meaning you can call them with invalid arguments and they will throw an error
+<ul>
+<li>e.g. <code>head []</code> will throw an error, other examples are <code>head</code>, <code>tail</code>, <code>last</code>, <code>maximum</code>, <code>minimum</code> etc.</li>
+<li>Alternative preludes like <a href="https://hackage.haskell.org/package/relude"><code>relude</code></a>, <a href="https://hackage.haskell.org/package/rebase"><code>rebase</code></a> and <a href="https://hackage.haskell.org/package/universum"><code>universum</code></a> solve most of these problems</li>
+</ul>
+</li>
+<li>lazy evaluation (<code>foldl</code> vs <code>foldl'</code>)</li>
+<li>What are the things that are just different enough from what I’m used to that will confuse me? What will trip me up every time I switch back to a different language?
+<ul>
+<li>Immutability. Many other languages let you mutate variables, but Haskell is pure and immutable.</li>
+<li>Lazy evaluation. This can cause memory leak issues if you&rsquo;re not careful.</li>
+<li>unary minus vs binary minus (you need to wrap the negative number in parentheses)</li>
+</ul>
+</li>
+<li>What parts of the core language should I avoid at all costs?
+<ul>
+<li><code>String</code>, although it&rsquo;s sometimes required. Avoid where possible.</li>
+<li>See <a href="https://github.com/sdiehl/wiwinwlh/blob/master/tutorial.md#what-to-avoid">relevant section from WIWINWLH</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="how-to-get-help">How to get help?</h3>
+<p>There&rsquo;s active Haskell communities in the following mediums:
+<a href="https://discord.gg/eTbWSZj">Discord</a>, <a href="https://www.haskell.org/irc/">IRC/Matrix</a>, <a href="https://www.reddit.com/r/haskell/">Reddit</a>, <a href="https://discourse.haskell.org/">Discourse</a></p>
+<h3 id="what-resources-to-use-for-learning-haskell">What resources to use for learning Haskell?</h3>
+<ul>
+<li><a href="https://www.learnyouahaskell.com/">Learn you a Haskell for Greater Good</a> (LYAH)</li>
+<li><a href="https://haskellbook.com/">Haskell from First Principles</a> (sometimes referred to as &ldquo;the Haskell book&rdquo;)</li>
+<li><a href="https://github.com/sdiehl/wiwinwlh/blob/master/tutorial.md">What I Wish I Knew When Learning Haskell</a></li>
+<li><a href="https://effective-haskell.com/">Effective Haskell</a></li>
+<li><a href="https://www.learnyouahaskell.com/">Haskell wiki</a></li>
+</ul>
+<h3 id="how-to-debug">How to debug?</h3>
+<ul>
+<li><a href="https://hackage.haskell.org/package/base-4.19.1.0/docs/Debug-Trace.html"><code>Debug.Trace</code></a></li>
+<li>
+<blockquote>
+<p>&ldquo;Is this one of those communities which think debuggers are for n00bs and you should write a lot of print statements?&rdquo;</p>
+</blockquote>
+<ul>
+<li>I think people understand the usefulness of debuggers and have less judgemental views on using them as the before statement. But yes, print statements (and <code>Debug.Trace</code>) are the go-to way of debugging Haskell.</li>
+</ul>
+</li>
+<li><a href="https://downloads.haskell.org/~ghc/8.10.3/docs/html/users_guide/ghci.html#the-ghci-debugger">GHCi debugger</a> exists, but it&rsquo;s interface probably isn&rsquo;t as fancy as you&rsquo;ve used to.</li>
+</ul>
+<h3 id="testing">Testing</h3>
+<ul>
+<li>Is unit testing part of the core library, or do I need to install a third party framework?
+<ul>
+<li>There&rsquo;s multiple different libraries for unit testing
+<ul>
+<li><a href="https://hackage.haskell.org/package/hspec">hspec</a> and <a href="https://hackage.haskell.org/package/tasty">tasty</a> seem to be the most popular.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Property based testing
+<ul>
+<li><a href="https://hackage.haskell.org/package/QuickCheck">QuickCheck</a> is the canonical property based testing library, which has inspired other languages as well.</li>
+</ul>
+</li>
+</ul>
+<h3 id="how-do-i-build-how-do-i-package-how-do-i-manage-my-environment">How do I build? How do I package? How do I manage my environment?</h3>
+<ul>
+<li>Stack, Cabal - choose one and stick with it</li>
+<li>Managing your environment should be done with GHCup as mentioned earlier</li>
+<li>What are all the command flags I should be using that aren’t default for various reasons?
+<ul>
+<li>Kowainik&rsquo;s style guide has a good default set of <a href="https://kowainik.github.io/posts/2019-02-06-style-guide#ghc-options">GHC options</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="how-am-i-supposed-to-properly-organize-my-project-files">How am I supposed to “properly” organize my project files?</h3>
+<p>This is explained well by <a href="https://github.com/sdiehl/wiwinwlh/blob/master/tutorial.md#project-structure">Steph Diehl</a>.</p>
+<h3 id="so-the-language-community">So… the language community.</h3>
+<ul>
+<li>What innocuous-seeming topics always turn into a flamewar? Is my question even safe to ask?
+<ul>
+<li>People can be very opinionated on formatting styles of Haskell source code</li>
+<li>Using <code>cabal</code> vs <code>stack</code> for package management</li>
+<li>I&rsquo;d expect the discussion to remain civil and constructive regardless of the topic!</li>
+</ul>
+</li>
+<li>Now they’re explaining something way above my head. Is this necessary to get, or are they just cursed with knowledge?
+<ul>
+<li>You&rsquo;ll see a lot of math and category theory jargon (learning them is usually not essential, but might be interesting)</li>
+</ul>
+</li>
+<li>What opinions do they have on other programming languages? Are they going to look down on me for writing a lot of Python?
+<ul>
+<li>You won&rsquo;t get looked down. The community is small and even slightest interest is usually very welcome.</li>
+</ul>
+</li>
+<li>Do they think I’m subhuman scum for using Windows?
+<ul>
+<li>No, although the experience on (native) Windows may be a bit rough, some libraries may not work etc. Generally Linux is more widely used in the community. WSL might work just fine, but I don&rsquo;t have any Haskell development experience on Windows.</li>
+</ul>
+</li>
+<li>What are all these in-jokes supposed to be?
+<ul>
+<li>Monads are burritos (originates from a couple of <a href="https://byorgey.wordpress.com/2009/01/12/abstraction-intuition-and-the-monad-tutorial-fallacy/">blog</a> <a href="https://blog.plover.com/prog/burritos.html">posts</a>)</li>
+<li>Just a monoid in the category of endofunctors. What&rsquo;s so hard about it? (<a href="https://stackoverflow.com/a/3870310">origin explained + a monoid tutorial</a>)</li>
+<li>Monad tutorials are everywhere</li>
+<li>Unofficial Haskell slogan <a href="https://haskell.foundation/whitepaper/">&ldquo;Avoid success at all costs&rdquo;</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="conclusion">Conclusion</h3>
+<p>My goal for writing this post was to get a better understanding of the Haskell ecosystem and community from a beginner&rsquo;s perspective. I consider myself an intermediate Haskeller, but I&rsquo;m continuously learning. I hope you found this post helpful!</p>
+
+<div style="text-align: right; margin-right: 0.5em;">
+    <a href="..">Back to Posts</a>
+</div>
+
+        </div>
+<footer>
+    <div>
+        <p>
+        <hr/>
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>
+            &copy; 2022 Aleksi Tarvainen
+        </p>
+    </div>
+</footer>
+</body>
+</html>
