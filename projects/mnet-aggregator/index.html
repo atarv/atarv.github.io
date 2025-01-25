@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html><head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/syntax.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
     <title>Aleksi Tarvainen - M.net listings aggregator</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js"></script>
     <script>
         window.addEventListener('load', () => {
             quicklink.listen();
@@ -59,7 +60,7 @@
 </nav>
 <div id="content">
 <div class="headline">
-    <h2>Project: M.net listings aggregator</h2>
+    <h1 class="page-title">Project: M.net listings aggregator</h2>
     <div class="date">
         2020-08-23
     </div>
@@ -129,20 +130,30 @@ eventually. Nowadays I don&rsquo;t really browse Muusikoiden.net anymore. I just
 wait for the summary to arrive in my inbox. I feel like while coding this
 project in Haskell strengthened my grasp on using monads and ability to
 figure out libraries.</p>
+<p><strong>Update 2024-06-15</strong>: The project is now hosted on AWS. Data is stored in
+DynamoDB and emails are sent via SES.</p>
+<p><strong>Update 2025-01-24</strong>: Muusikoiden.net v4 was published and now they seem to
+block requests coming from AWS, so I had to refactor the program to two: first
+does scraping and then sends the data to Lambda via API Gateway for further
+processing. I&rsquo;m running the scraping part on my homeserver using a cron job.</p>
 <p><a href="https://github.com/atarv/mnet-aggregator">Source code on GitHub</a></p>
 <p>Some useless statistics:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl">---------------------------------------------------------------
-</span></span><span class="line"><span class="cl"> Language      Files    Lines     Code     Comments     Blanks
-</span></span><span class="line"><span class="cl">---------------------------------------------------------------
-</span></span><span class="line"><span class="cl"> Haskell          13      465      310          111         44
-</span></span><span class="line"><span class="cl"> Markdown          1      107      107            0          0
-</span></span><span class="line"><span class="cl"> Cabal             1       87       76            5          6
-</span></span><span class="line"><span class="cl"> Dockerfile        1       54       27           14         13
-</span></span><span class="line"><span class="cl"> YAML              2       69        7           57          5
-</span></span><span class="line"><span class="cl">---------------------------------------------------------------
-</span></span><span class="line"><span class="cl"> Total            18      782      527          187         68
-</span></span><span class="line"><span class="cl">---------------------------------------------------------------
-</span></span><span class="line"><span class="cl">Updated 2020-08-23
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl">===============================================================================
+</span></span><span class="line"><span class="cl"> Language            Files        Lines         Code     Comments       Blanks
+</span></span><span class="line"><span class="cl">===============================================================================
+</span></span><span class="line"><span class="cl"> Cabal                   1          112          100            5            7
+</span></span><span class="line"><span class="cl"> Dockerfile              2          140           73           36           31
+</span></span><span class="line"><span class="cl"> Haskell                14          731          549          123           59
+</span></span><span class="line"><span class="cl"> Makefile                1            6            6            0            0
+</span></span><span class="line"><span class="cl"> YAML                    2           83           16           62            5
+</span></span><span class="line"><span class="cl">-------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl"> Markdown                1          108            0           79           29
+</span></span><span class="line"><span class="cl"> |- Haskell              1           12           11            1            0
+</span></span><span class="line"><span class="cl"> (Total)                            120           11           80           29
+</span></span><span class="line"><span class="cl">===============================================================================
+</span></span><span class="line"><span class="cl"> Total                  21         1180          744          305          131
+</span></span><span class="line"><span class="cl">===============================================================================
+</span></span><span class="line"><span class="cl">Updated 2025-01-25
 </span></span></code></pre></div>
 <div style="text-align: right; margin-right: 0.5em;">
     <a href="..">Back to Projects</a>
@@ -154,7 +165,7 @@ figure out libraries.</p>
         <p>
         <hr/>
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>
-            &copy; 2022 Aleksi Tarvainen
+            &copy; 2023 Aleksi Tarvainen
         </p>
     </div>
 </footer>

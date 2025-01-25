@@ -6,8 +6,15 @@
     <description>Recent content in Projects on Aleksi Tarvainen</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Aug 2020 11:12:56 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 17 Feb 2023 20:28:23 +0200</lastBuildDate>
     <atom:link href="https://www.atarv.dev/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Krapu</title>
+      <link>https://www.atarv.dev/projects/krapu/</link>
+      <pubDate>Fri, 17 Feb 2023 20:28:23 +0200</pubDate>
+      <guid>https://www.atarv.dev/projects/krapu/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rs&#34; data-lang=&#34;rs&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fn&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello, Krapu!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;So if you&amp;rsquo;re a programmer, surely you must write your own programming language&#xA;at some point, right? I&amp;rsquo;m not sure about that, but at least I kind of did one in&#xA;the spring of 2021.  It&amp;rsquo;s called &lt;a href=&#34;https://github.com/atarv/krapu&#34;&gt;Krapu&lt;/a&gt;,&#xA;because its syntax is almost copied from Rust and Rusts unofficial mascot is&#xA;Ferris the crab. Given the name, file extension must be &lt;code&gt;.krap&lt;/code&gt;, because that&amp;rsquo;s&#xA;all what&amp;rsquo;s going to be written in the language. Nothing serious. This was just&#xA;an exercise. Use it in production at your own risk.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>M.net listings aggregator</title>
       <link>https://www.atarv.dev/projects/mnet-aggregator/</link>
