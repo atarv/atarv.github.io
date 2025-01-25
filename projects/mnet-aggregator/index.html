@@ -135,26 +135,64 @@ DynamoDB and emails are sent via SES.</p>
 <p><strong>Update 2025-01-24</strong>: Muusikoiden.net v4 was published and now they seem to
 block requests coming from AWS, so I had to refactor the program to two: first
 does scraping and then sends the data to Lambda via API Gateway for further
-processing. I&rsquo;m running the scraping part on my homeserver using a cron job.</p>
+processing. I&rsquo;m running the scraping part on my home server using a cron job.</p>
 <p><a href="https://github.com/atarv/mnet-aggregator">Source code on GitHub</a></p>
-<p>Some useless statistics:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl">===============================================================================
-</span></span><span class="line"><span class="cl"> Language            Files        Lines         Code     Comments       Blanks
-</span></span><span class="line"><span class="cl">===============================================================================
-</span></span><span class="line"><span class="cl"> Cabal                   1          112          100            5            7
-</span></span><span class="line"><span class="cl"> Dockerfile              2          140           73           36           31
-</span></span><span class="line"><span class="cl"> Haskell                14          731          549          123           59
-</span></span><span class="line"><span class="cl"> Makefile                1            6            6            0            0
-</span></span><span class="line"><span class="cl"> YAML                    2           83           16           62            5
-</span></span><span class="line"><span class="cl">-------------------------------------------------------------------------------
-</span></span><span class="line"><span class="cl"> Markdown                1          108            0           79           29
-</span></span><span class="line"><span class="cl"> |- Haskell              1           12           11            1            0
-</span></span><span class="line"><span class="cl"> (Total)                            120           11           80           29
-</span></span><span class="line"><span class="cl">===============================================================================
-</span></span><span class="line"><span class="cl"> Total                  21         1180          744          305          131
-</span></span><span class="line"><span class="cl">===============================================================================
-</span></span><span class="line"><span class="cl">Updated 2025-01-25
-</span></span></code></pre></div>
+<p>Some useless statistics (updated 2025-01-25):</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Language/Type</th>
+          <th style="text-align: right">Files</th>
+          <th style="text-align: right">Code</th>
+          <th style="text-align: right">Comments</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>Cabal</strong></td>
+          <td style="text-align: right">1</td>
+          <td style="text-align: right">100</td>
+          <td style="text-align: right">5</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Dockerfile</strong></td>
+          <td style="text-align: right">2</td>
+          <td style="text-align: right">73</td>
+          <td style="text-align: right">36</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Haskell</strong></td>
+          <td style="text-align: right">14</td>
+          <td style="text-align: right">549</td>
+          <td style="text-align: right">123</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Makefile</strong></td>
+          <td style="text-align: right">1</td>
+          <td style="text-align: right">6</td>
+          <td style="text-align: right">0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Markdown</strong></td>
+          <td style="text-align: right">1</td>
+          <td style="text-align: right">0</td>
+          <td style="text-align: right">79</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>YAML</strong></td>
+          <td style="text-align: right">2</td>
+          <td style="text-align: right">16</td>
+          <td style="text-align: right">62</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Total</strong></td>
+          <td style="text-align: right">21</td>
+          <td style="text-align: right">744</td>
+          <td style="text-align: right">305</td>
+      </tr>
+  </tbody>
+</table>
+
 <div style="text-align: right; margin-right: 0.5em;">
     <a href="..">Back to Projects</a>
 </div>
@@ -165,7 +203,7 @@ processing. I&rsquo;m running the scraping part on my homeserver using a cron jo
         <p>
         <hr/>
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>
-            &copy; 2023 Aleksi Tarvainen
+            &copy; 2025 Aleksi Tarvainen
         </p>
     </div>
 </footer>
